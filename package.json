@@ -1,0 +1,35 @@
+{
+  "name": "opendevs",
+  "private": true,
+  "description": "A simple landing website to showcase open source contribution of opendevs",
+  "version": "0.0.1",
+  "author": "open-devs",
+  "scripts": {
+    "build": "gridsome build",
+    "dev": "gridsome develop",
+    "explore": "gridsome explore",
+    "opendevs-preview": "gridsome develop -p 8080 --host 0.0.0.0",
+    "commit-a": "git add . && git cz",
+    "commit": "git cz"
+  },
+  "dependencies": {
+    "@gridsome/source-filesystem": "^0.5.0",
+    "@gridsome/transformer-remark": "^0.3.2",
+    "gridsome": "^0.6.0",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^7.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.7.0",
+    "eslint-plugin-vue": "^6.2.2",
+    "git-cz": "^4.7.0"
+  },
+  "keywords": [
+    "gridsome",
+    "opendevs"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Open-Devs/opendevs"
+  }
+}

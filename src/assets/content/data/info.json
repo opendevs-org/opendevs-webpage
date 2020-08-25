@@ -1,0 +1,21 @@
+{
+  "description": "<p>An organization of two motivated developers, building open source enterprise level softwares to contribute to community</p>",
+  "contact": {
+    "email": "open.devs.github@gmail.com",
+    "github_handle": "Open-Devs"
+  },
+  "contributer1": {
+    "email": "alokr417@gmail.com",
+    "github_handle": "alok722",
+    "twitter_handle": "alok722",
+    "linkedin_handle": "alok722"
+  },
+  "contributer2": {
+    "email": "mikr13@gmail.com",
+    "github_handle": "mikr13",
+    "twitter_handle": "mikr13",
+    "linkedin_handle": "mikr13"
+  },
+  "background_color": "#B1BCBC",
+  "text_color": "#ebebeb"
+}

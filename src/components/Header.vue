@@ -2,43 +2,70 @@
     <header class="header">
         <nav class="nav">
             <g-link to="/" exact>
-                <h1>{{ $static.metaData.siteName }}</h1>
+                <h1>{{ $static.metadata.siteName }}</h1>
             </g-link>
+
+            <em @click="toggleDarkMode" class="button" :style="{ color: activeColor }">
+                {{ isDark ? "light" : "dark" }}
+            </em>
+
             <div>
-                <h1>
+                <h2>
                     <g-link :to="infoLink">
                         {{ isInfoPage ? "close" : "info" }}
                     </g-link>
-                </h1>
+                </h2>
             </div>
         </nav>
     </header>
 </template>
 
 <script>
+
 export default {
 	props: {
 		page: {
 			type: String,
 			required: true
 		}
-	},
+    },
+
+    data: () => ({
+        isDark: false
+    }),
+
 	computed: {
 		isInfoPage() {
 			return this.page === 'info' && true;
 		},
 		infoLink() {
 			return this.isInfoPage ? '/' : '/info';
-		}, 
-	}
+        },
+        activeColor () {
+            return this.isDark ? '#fff' : '#1c1c1c';
+        }
+    },
+
+    mounted () {
+        this.isDark = this.$darkmode.isActivated();
+    },
+    
+    methods: {
+
+        toggleDarkMode () {
+            this.$darkmode.toggle();
+            this.isDark = this.$darkmode.isActivated();
+        }
+
+    }
 };
 </script>
 
 <static-query>
     query {
-    metaData {
-        siteName
-    }
+        metadata {
+            siteName
+        }
     }
 </static-query>
 

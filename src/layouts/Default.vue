@@ -30,10 +30,6 @@ export default {
       flex-direction: column;
       min-height: 100vh;
   }
-
-  .layout .info_page {
-    color: #ebebeb;
-  }
     
   .content {
     flex-grow: 1;

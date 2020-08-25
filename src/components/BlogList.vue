@@ -60,7 +60,6 @@ export default {
       width: 100%;
       height: 33vh;
       overflow: hidden;
-      background-color: #000;
       img {
         object-fit: cover;
         object-position: 50% 50%;
@@ -101,7 +100,6 @@ export default {
     }
     p {
       max-width: 900px;
-      color: #464646;
     }
   }
   

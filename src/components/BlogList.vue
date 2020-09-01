@@ -30,7 +30,11 @@ export default {
 			type: Array,
 			required: true
 		}
-	},
+  },
+  
+  mounted () {
+    this.posts.forEach(el => console.log(el.node));
+  },
 	methods: {
 		formatDate(date) {
 			return new Date(date).toDateString().slice(4);

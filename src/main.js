@@ -12,9 +12,9 @@ export default function (Vue, { router, head, isClient }) {
 
 
 	const options = {
-		time: '0.5s',
+		time: '1s',
 		autoMatchOsTheme: true,
-		saveInCookies: false
+		saveInCookies: true
 	};
 
 	Vue.prototype.$darkmode = new Darkmode(options);

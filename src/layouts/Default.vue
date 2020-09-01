@@ -11,15 +11,15 @@
 import Header from '~/components/Header.vue';
 
 export default {
-	components: {
-		Header
-	}, 
-	props: {
-		page: {
-			type: String,
-			required: true
-		}
-	}, 
+  components: {
+    Header
+  }, 
+  props: {
+    page: {
+      type: String,
+      required: true
+    }
+  }, 
         
 };
 </script>

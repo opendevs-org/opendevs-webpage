@@ -1,8 +1,8 @@
 ---
-title: fastify typeScript generator, a generator for creating fastify server with typescript 
+title: fastify typeScript generator, a generator for creating fastify server with typescript
 author: open devs
 date: 2020-09-01T07:00:00Z
-hero_image: "https://dev-to-uploads.s3.amazonaws.com/i/ob3zjtv5rudp4x0pq6hy.png"
+hero_image: "https://miro.medium.com/max/2560/1*V8vAkYA9QOi-gLKh68mtOg.jpeg"
 
 ---
 hi everyone, 👋

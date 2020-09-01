@@ -1,6 +1,6 @@
 {
   "name": "opendevs",
-  "private": true,
+  "private": false,
   "description": "A simple landing website to showcase open source contribution of opendevs",
   "version": "0.0.1",
   "author": "open-devs",
@@ -10,7 +10,8 @@
     "explore": "gridsome explore",
     "opendevs-preview": "gridsome develop -p 8080 --host 0.0.0.0",
     "commit-a": "git add . && git cz",
-    "commit": "git cz"
+    "commit": "git cz",
+    "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "@gridsome/source-filesystem": "^0.6.2",
@@ -21,7 +22,11 @@
     "sass-loader": "^10.0.0"
   },
   "devDependencies": {
-    "eslint": "^7.7.0",
+    "@vue/cli-plugin-eslint": "^4.5.4",
+    "@vue/cli-service": "^4.5.4",
+    "eslint-plugin-import": "^2.22.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.8.0",
     "eslint-plugin-vue": "^6.2.2",
     "git-cz": "^4.7.0"
   },

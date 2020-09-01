@@ -97,7 +97,7 @@
 export default {
   metaInfo() {
     return {
-      title: "Info",
+      title: 'Info',
       bodyAttrs: {
         style: `background-color: ${this.data.background_color}; color: ${
           this.data.text_color

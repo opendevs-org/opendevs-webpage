@@ -8,12 +8,12 @@
 import BlogList from '~/components/BlogList.vue';
 
 export default {
-	metaInfo: {
-		title: 'Home'
-	},
-	components: {
-		BlogList
-	}
+  metaInfo: {
+    title: 'Home'
+  },
+  components: {
+    BlogList
+  }
 };
 </script>
 

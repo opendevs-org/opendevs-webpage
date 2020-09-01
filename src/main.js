@@ -8,14 +8,14 @@ import '~/assets/styles/reset.scss';
 import '~/assets/styles/global.scss';
 
 export default function (Vue, { router, head, isClient }) {
-	Vue.component('Layout', DefaultLayout);
+  Vue.component('Layout', DefaultLayout);
 
 
-	const options = {
-		time: '1s',
-		autoMatchOsTheme: true,
-		saveInCookies: true
-	};
+  const options = {
+    time: '1s',
+    autoMatchOsTheme: true,
+    saveInCookies: true
+  };
 
-	Vue.prototype.$darkmode = new Darkmode(options);
+  Vue.prototype.$darkmode = new Darkmode(options);
 }

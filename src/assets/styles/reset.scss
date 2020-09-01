@@ -16,6 +16,11 @@
   }
 }
 
+html {
+  box-sizing: border-box;
+  overflow-y: scroll;
+}
+
 body {
   font-weight: normal;
   word-wrap: break-word;
@@ -106,7 +111,6 @@ img {
 svg:not(:root) {
   overflow: hidden;
 }
-code,
 kbd,
 pre,
 samp {
@@ -195,11 +199,6 @@ textarea {
 ::-webkit-file-upload-button {
   -webkit-appearance: button;
 }
-html {
-  box-sizing: border-box;
-  overflow-y: scroll;
-}
-
 img {
   max-width: 100%;
   margin-left: 0;

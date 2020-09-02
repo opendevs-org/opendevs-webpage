@@ -27,7 +27,7 @@ export default {
                     path
                     author
                     date  (format: "MMMM DD YYYY")
-                    hero_image (width:1000, quality: 75)
+                    hero_image
                     content
                 }
             }

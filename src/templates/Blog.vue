@@ -49,7 +49,7 @@ query getPostData ($path: String!) {
         date (format: "MMMM DD YYYY")
         author
         content
-        hero_image (quality: 80)
+        hero_image
     }
     all: allBlog {
         edges {

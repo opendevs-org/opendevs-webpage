@@ -4,10 +4,18 @@
 
 import DefaultLayout from '~/layouts/Default.vue';
 import Darkmode from 'darkmode-js';
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+import { config, library } from '@fortawesome/fontawesome-svg-core';
+import { faArrowLeft, faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
+import '@fortawesome/fontawesome-svg-core/styles.css';
 import '~/assets/styles/reset.scss';
 import '~/assets/styles/global.scss';
 
+config.autoAddCss = false;
+library.add(faArrowLeft, faSun, faMoon);
+
 export default function (Vue, { router, head, isClient }) {
+  Vue.component('font-awesome', FontAwesomeIcon);
   Vue.component('Layout', DefaultLayout);
 
 

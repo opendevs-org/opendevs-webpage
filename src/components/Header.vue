@@ -1,21 +1,34 @@
 <template>
   <header class="header">
+
     <nav class="nav">
-      <g-link to="/" exact>
+
+      <g-link to="/" exact v-if="routerLink === '/'">
         <h1>{{ $static.metadata.siteName }}</h1>
       </g-link>
 
-      <em class="button" :style="{ color: !activeColor }">
-        <label class="switch"
-          ><input type="checkbox" id="togBtn" @click="toggleDarkMode"/>
-          <div class="slider round"></div
-        ></label>
-      </em>
+      <div class="back-button" v-else @click="goBack()">
+        <font-awesome :icon="['fas', 'arrow-left']"/> <h1> {{ $static.metadata.siteName }}</h1>
+      </div>
 
       <div>
         <h2>
-          <g-link :to="infoLink">
-            {{ isInfoPage ? "close" : "info" }}
+          <g-link to="/blogs">
+            blogs
+          </g-link>
+        </h2>
+      </div>
+
+      <div @click="toggleDarkMode">
+        <font-awesome class="theme-change" v-if="!activeColor" :icon="['fas', 'sun']"/>
+        <font-awesome class="theme-change" v-else :icon="['fas', 'moon']"/>
+      </div>
+
+
+      <div>
+        <h2>
+          <g-link :to="'/info'">
+            info
           </g-link>
         </h2>
       </div>
@@ -37,14 +50,17 @@ export default {
   }),
 
   computed: {
-    isInfoPage() {
-      return this.page === 'info' && true;
-    },
-    infoLink() {
-      return this.isInfoPage ? '/' : '/info';
-    },
+
     activeColor() {
-      return this.isDark ? '#fff' : '#1c1c1c';
+      return this.isDark;
+    },
+
+    routerLink () {
+      return this.$route.path;
+    },
+
+    pageName () {
+      return this.$route.name;
     }
   },
 
@@ -56,6 +72,10 @@ export default {
     toggleDarkMode() {
       this.$darkmode.toggle();
       this.isDark = this.$darkmode.isActivated();
+    },
+
+    goBack () {
+      this.$router.go(-1);
     }
   }
 };
@@ -69,9 +89,39 @@ export default {
     }
 </static-query>
 
-<style>
+<style lang="scss">
 .header h1 {
   margin-bottom: 0;
+}
+
+.back-button {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+
+  svg {
+    font-size: 1.5rem;
+    margin: 1.17em 0;
+    margin-bottom: 0;
+    margin-right: 10px;
+  }
+}
+
+.theme-change {
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.darkmode--activated {
+  .back-button {
+    color: #ebebeb;
+  }
+
+  .theme-change {
+    color: #ebebeb;
+  }
 }
 
 .nav {
@@ -89,7 +139,7 @@ export default {
 
 @media (min-width: 768px) {
   .header {
-    height: 100vh;
+    height: calc(100vh - 65px);
     position: fixed;
     left: 0;
     top: 0;
@@ -105,63 +155,20 @@ export default {
     align-items: flex-start;
   }
 }
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 70px;
-  height: 34px;
-}
 
-.switch input {
-  display: none;
-}
+@media screen and (max-width: 768px) {
+  .header {
+    h1 {
+      margin: 0;
+    }
+  }
 
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #000;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-  border-radius: 34px;
-}
+  .back-button {
+    svg {
+      margin: 0;
+      margin-right: 10px;
+    }
+  }
 
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: #fff;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-  border-radius: 50%;
-}
-
-input:checked + .slider {
-  background-color: #fff;
-}
-
-input:checked + .slider:before {
-  background-color: #000;
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(35px);
-  -ms-transform: translateX(35px);
-  transform: translateX(35px);
-}
-
-.slider:after {
-  display: block;
-  position: absolute;
-  transform: translate(-50%, -50%);
-  background-color: #fff;
-  top: 50%;
-  left: 50%;
 }
 </style>

@@ -19,7 +19,7 @@
         </h2>
       </div>
 
-      <div @click="toggleDarkMode">
+      <div @click="toggleDarkMode" v-if="browserName !== 'Firefox'">
         <font-awesome class="theme-change" v-if="!activeColor" :icon="['fas', 'sun']"/>
         <font-awesome class="theme-change" v-else :icon="['fas', 'moon']"/>
       </div>
@@ -37,6 +37,8 @@
 </template>
 
 <script>
+import Bowser from 'bowser';
+
 export default {
   props: {
     page: {
@@ -46,7 +48,8 @@ export default {
   },
 
   data: () => ({
-    isDark: false
+    isDark: false,
+    browserName: null
   }),
 
   computed: {
@@ -65,13 +68,14 @@ export default {
   },
 
   mounted() {
-    this.isDark = this.$darkmode.isActivated();
+    this.isDark = document.documentElement.classList.contains('dark-mode');
+    this.browserName = Bowser.getParser(window.navigator.userAgent).parsedResult.browser.name;
   },
 
   methods: {
     toggleDarkMode() {
-      this.$darkmode.toggle();
-      this.isDark = this.$darkmode.isActivated();
+      document.documentElement.classList.toggle('dark-mode');
+      this.isDark = document.documentElement.classList.contains('dark-mode');
     },
 
     goBack () {
@@ -112,16 +116,6 @@ export default {
 .theme-change {
   cursor: pointer;
   font-size: 1.5rem;
-}
-
-.darkmode--activated {
-  .back-button {
-    color: #ebebeb;
-  }
-
-  .theme-change {
-    color: #ebebeb;
-  }
 }
 
 .nav {

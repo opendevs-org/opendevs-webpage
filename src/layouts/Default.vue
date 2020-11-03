@@ -13,14 +13,14 @@ import Header from '~/components/Header.vue';
 export default {
   components: {
     Header
-  }, 
+  },
   props: {
     page: {
       type: String,
       required: true
     }
-  }, 
-        
+  },
+
 };
 </script>
 
@@ -30,11 +30,11 @@ export default {
       flex-direction: column;
       min-height: 100vh;
   }
-    
+
   .content {
     flex-grow: 1;
   }
-    
+
   @media (min-width: 768px) {
     .layout {
       display: block;

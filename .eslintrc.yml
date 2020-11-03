@@ -9,6 +9,7 @@ extends:
 parserOptions:
   ecmaVersion: 11
 rules:
+  vue/experimental-script-setup-vars: 'off'
   no-useless-catch: 'off'
   no-undef: 'off'
   indent:

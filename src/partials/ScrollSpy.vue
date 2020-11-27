@@ -28,7 +28,10 @@ export default {
   props: {
     items: {
       type: Array,
-      required: true
+      required: true,
+      default () {
+        return [];
+      }
     },
     active: {
       type: Number,

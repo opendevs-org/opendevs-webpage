@@ -75,7 +75,7 @@
               </h2>
               <all-projects
                 class="pt-32 pb-40 md:py-0"
-                :items="$page.repositories.edges"
+                :items="[]"
               />
             </div>
             <div
@@ -88,7 +88,7 @@
               >
                 Talks
               </h2>
-              <all-talks class="pt-32 pb-40 md:py-0" :items="$page.talks.edges" />
+              <all-talks class="pt-32 pb-40 md:py-0" :items="[]" />
             </div>
             <div
               id="interviews"
@@ -102,7 +102,7 @@
               </h2>
               <all-interviews
                 class="pt-80 md:pt-0 md:mt-72"
-                :items="$page.interviews.edges"
+                :items="[]"
               />
             </div>
             <p
@@ -155,6 +155,11 @@ export default {
   async mounted() {
     const { username } = this.$route.params;
     this.username = username;
+  },
+  methods: {
+    onVisibilityChange (val) {
+      console.log(val);
+    }
   }
 };
 </script>

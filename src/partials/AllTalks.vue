@@ -14,7 +14,6 @@
 </template>
 
 <script>
-import { md } from '../tailwind/breakpoints';
 
 import TalkCard from '../components/TalkCard';
 
@@ -44,7 +43,7 @@ export default {
     window.addEventListener('scroll', this.onScroll);
 
     window.addEventListener('resize', () => {
-      const isMediumScreen = window.innerWidth <= md;
+      const isMediumScreen = window.innerWidth <= 600;
       this.shouldParallax = !isMediumScreen;
     });
   },

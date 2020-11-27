@@ -41,8 +41,8 @@ export default {
     }
     .content {
       flex-grow: none;
-      width: 70vw;
-      margin-left: 30vw;
+      width: 80vw;
+      margin-left: 20vw;
     }
   }
 </style>

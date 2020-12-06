@@ -15,22 +15,30 @@
           <div class="container relative mx-auto">
             <div class="items-center flex flex-wrap">
               <div class="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
-                <div class="pr-12">
+                <div class="py-4">
                   <h1 class="font-semibold text-5xl">open devs</h1>
                   <p class="mt-4 text-lg text-gray-600">
                     open devs is an organization created by two motivated
-                    developers (@mikr13, @alok722) building open source software
-                    to contribute to the community. ✌
+                    developers (<a
+                      class="contributor"
+                      :href="`https://linkedin.com/in/mikr13`"
+                      >@mikr13</a
+                    >,
+                    <a
+                      class="contributor"
+                      :href="`https://linkedin.com/in/alok722`"
+                      >@alok722</a
+                    >) building open source software to contribute to the
+                    community. ✌
                   </p>
-                </div>
-                <div class="py-4">
-                  <g-link to="/blogs/">
+                  <g-link to="/blogs/" class="py-12">
                     <button
                       type="button"
-                      @click="goToBlog"
-                      class="bg-black rounded-lg p-2 inline-flex items-center justify-center text-white hover:text-gray-800 hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+                      class="bg-black my-4 rounded-lg p-2 py-2 inline-flex items-center justify-center text-white hover:text-gray-800 hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
                     >
-                      all product blogs &nbsp;<font-awesome :icon="['fas', 'arrow-right']"/>
+                      all product blogs &nbsp;<font-awesome
+                        :icon="['fas', 'arrow-right']"
+                      />
                     </button>
                   </g-link>
                 </div>
@@ -267,7 +275,7 @@
 <script>
 export default {
   metaInfo: {
-    title: 'Home',
-  }
+    title: "Home",
+  },
 };
 </script>

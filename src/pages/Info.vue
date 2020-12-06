@@ -51,23 +51,6 @@
           </p>
         </li>
         <li>
-          <em>Twitter:</em>
-          <p>
-            <a
-              class="contributor"
-              :href="`https://twitter.com/${data.contributer1.twitter_handle}`"
-            >
-              {{ data.contributer1.twitter_handle }} </a
-            >,
-            <a
-              class="contributor"
-              :href="`https://twitter.com/${data.contributer2.twitter_handle}`"
-            >
-              {{ data.contributer2.twitter_handle }}
-            </a>
-          </p>
-        </li>
-        <li>
           <em>LinkedIn:</em>
           <p>
             <a
@@ -124,13 +107,11 @@ export default {
                 }
                 contributer1 {
                     email
-                    twitter_handle
                     github_handle
                     linkedin_handle
                 }
                 contributer2 {
                     email
-                    twitter_handle
                     github_handle
                     linkedin_handle
                 }

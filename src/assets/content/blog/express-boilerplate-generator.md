@@ -2,7 +2,7 @@
 title: express boilerplate generator, a generator for scaffolding express basic setup with ease
 author: open devs
 date: 2020-11-28T07:00:00Z
-hero_image: "assets/static/src/assets/content/images/expressJS-logo.png?width=1680&key=9e01131"
+hero_image: "https://miro.medium.com/max/2400/1*xK8B_iiUSK_eU3jyG79djA.jpeg"
 
 ---
 hi everyone, 👋

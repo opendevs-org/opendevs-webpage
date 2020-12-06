@@ -6,9 +6,7 @@
           class="relative pt-16 pb-32 flex content-center items-center justify-center"
           style="min-height: 75vh"
         >
-          <div
-            class="absolute top-0 w-full h-full bg-center bg-cover"
-          >
+          <div class="absolute top-0 w-full h-full bg-center bg-cover">
             <span
               id="blackOverlay"
               class="w-full h-full absolute opacity-75 bg-blue-100"
@@ -18,12 +16,23 @@
             <div class="items-center flex flex-wrap">
               <div class="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
                 <div class="pr-12">
-                  <h1 class="font-semibold text-5xl">
-                    open devs
-                  </h1>
+                  <h1 class="font-semibold text-5xl">open devs</h1>
                   <p class="mt-4 text-lg text-gray-600">
-                    open devs is an organization of two motivated developers (@MiKr13, @alok722) building open source enterprise-level software to contribute to the community. ✌
+                    open devs is an organization created by two motivated
+                    developers (@mikr13, @alok722) building open source software
+                    to contribute to the community. ✌
                   </p>
+                </div>
+                <div class="py-4">
+                  <g-link to="/blogs/">
+                    <button
+                      type="button"
+                      @click="goToBlog"
+                      class="bg-black rounded-lg p-2 inline-flex items-center justify-center text-white hover:text-gray-800 hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+                    >
+                      all product blogs &nbsp;<font-awesome :icon="['fas', 'arrow-right']"/>
+                    </button>
+                  </g-link>
                 </div>
               </div>
             </div>
@@ -61,9 +70,13 @@
                     >
                       <i class="fas fa-fingerprint"></i>
                     </div>
-                    <h6 class="text-xl font-semibold">open source development</h6>
+                    <h6 class="text-xl font-semibold">
+                      open source development
+                    </h6>
                     <p class="mt-2 mb-4 text-gray-600">
-                      our first goal is to develop utilities & softwares for open source community that can come in help to fellow developers
+                      our first goal is to develop utilities & softwares for
+                      open source community that can come in help to fellow
+                      developers
                     </p>
                   </div>
                 </div>
@@ -72,10 +85,12 @@
                 <div
                   class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg"
                 >
-                    <div class="px-4 py-5 flex-auto">
+                  <div class="px-4 py-5 flex-auto">
                     <h6 class="text-xl font-semibold">teaching</h6>
                     <p class="mt-2 mb-4 text-gray-600">
-                      we are spreading our learnings with other through online talks & courses with a goal to enable people to do their best work
+                      we are spreading our learnings with other through online
+                      talks & courses with a goal to enable people to do their
+                      best work
                     </p>
                   </div>
                 </div>
@@ -92,7 +107,9 @@
                     </div>
                     <h6 class="text-xl font-semibold">profile building</h6>
                     <p class="mt-2 mb-4 text-gray-600">
-                      we have also helped people with building profiles on linkedin & other similar platforms for better professional outlook
+                      we are also helping people with building profiles on
+                      linkedin & other similar platforms for better professional
+                      outlook
                     </p>
                   </div>
                 </div>
@@ -106,12 +123,14 @@
                 <p
                   class="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-700"
                 >
-                  you know something? a small project in mind? or want to teach your skills?
+                  you know something? a small project in mind? or want to teach
+                  your skills?
                 </p>
                 <p
                   class="text-lg font-light leading-relaxed mt-0 mb-4 text-gray-700"
                 >
-                  we can do all this together as a group of people who are passionate about helping fellow developers in community
+                  we can do all this together as a group of people who are
+                  passionate about helping fellow developers in community
                 </p>
               </div>
               <div class="w-full md:w-4/12 px-4 mr-auto ml-auto">
@@ -124,11 +143,10 @@
                     class="w-full align-middle rounded-t-lg"
                   />
                   <blockquote class="relative p-8 mb-4">
-                    <h4 class="text-xl font-bold text-white">
-                      Under one hood
-                    </h4>
+                    <h4 class="text-xl font-bold text-white">under one hood</h4>
                     <p class="text-md font-light mt-2 text-white">
-                      Use existing resources we have plus access to shared resources & knowledge to create & build your dream project
+                      use existing resources we have plus access to shared
+                      resources & knowledge to create & build your dream project
                     </p>
                   </blockquote>
                 </div>
@@ -153,9 +171,11 @@
                   >
                     <i class="fas fa-rocket text-xl"></i>
                   </div>
-                  <h3 class="text-3xl font-semibold">A growing team</h3>
+                  <h3 class="text-3xl font-semibold">a growing team</h3>
                   <p class="mt-4 text-lg leading-relaxed text-gray-600">
-                    we are growing with developers contributing in projects every day, we have merch on the way to showcase the love of open devs
+                    we are growing with developers contributing in projects
+                    every day, we have merch on the way to showcase the love of
+                    open devs
                   </p>
                   <ul class="list-none mt-6">
                     <li class="py-2">
@@ -167,9 +187,7 @@
                           ></span>
                         </div>
                         <div>
-                          <h4 class="text-gray-600">
-                            learn new technologies
-                          </h4>
+                          <h4 class="text-gray-600">learn new technologies</h4>
                         </div>
                       </div>
                     </li>
@@ -195,77 +213,13 @@
                           ></span>
                         </div>
                         <div>
-                          <h4 class="text-gray-600">get more views on your profile</h4>
+                          <h4 class="text-gray-600">
+                            get more views on your profile
+                          </h4>
                         </div>
                       </div>
                     </li>
                   </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="pb-48 mt-24">
-          <div class="container mx-auto px-4">
-            <div class="flex flex-wrap justify-center text-center mb-24">
-              <div class="w-full lg:w-6/12 px-4">
-                <h2 class="text-4xl font-semibold">Here are our heroes</h2>
-                <p class="text-lg leading-relaxed m-4 text-gray-600">
-                  some text here
-                </p>
-              </div>
-            </div>
-            <div class="flex flex-wrap">
-              <div class="w-full md:w-6/12 lg:w-6/12 lg:mb-0 mb-12 px-4">
-                <div class="px-6">
-                  <img
-                    alt="..."
-                    src="https://images.unsplash.com/photo-1555212697-194d092e3b8f?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=634&amp;q=80"
-                    class="shadow-lg rounded-full max-w-full mx-auto"
-                    style="max-width: 120px"
-                  />
-                  <div class="pt-6 text-center">
-                    <h5 class="text-xl font-bold">Mihir Kumar</h5>
-                    <p
-                      class="mt-1 text-sm text-gray-500 uppercase font-semibold"
-                    >
-                      Founder
-                    </p>
-                    <div class="mt-6">
-                      <button
-                        class="bg-blue-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                        type="button"
-                      >
-                        <i class="fab fa-twitter"></i></button
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="w-full md:w-6/12 lg:w-6/12 lg:mb-0 mb-12 px-4">
-                <div class="px-6">
-                  <img
-                    alt="..."
-                    src="https://images.unsplash.com/photo-1555212697-194d092e3b8f?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=634&amp;q=80"
-                    class="shadow-lg rounded-full max-w-full mx-auto"
-                    style="max-width: 120px"
-                  />
-                  <div class="pt-6 text-center">
-                    <h5 class="text-xl font-bold">Alok Raj</h5>
-                    <p
-                      class="mt-1 text-sm text-gray-500 uppercase font-semibold"
-                    >
-                      Founder
-                    </p>
-                    <div class="mt-6">
-                      <button
-                        class="bg-blue-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                        type="button"
-                      >
-                        <i class="fab fa-twitter"></i></button
-                      >
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
@@ -276,11 +230,31 @@
             <div class="flex flex-wrap text-center justify-center">
               <div class="w-full lg:w-6/12 px-4">
                 <h2 class="text-4xl font-semibold text-white">
-                  Build something
+                  build something
                 </h2>
                 <p class="text-lg leading-relaxed mt-4 mb-4 text-gray-500">
-                  connect with us at: some-links
+                  connect with us at:
                 </p>
+                <a
+                  href="mailto:open.devs.github@gmail.com"
+                  class="brand-icon text-green-400"
+                  ><font-awesome :icon="['fas', 'envelope']"
+                /></a>
+                <a
+                  href="https://github.com/open-devs"
+                  class="brand-icon text-green-400"
+                  ><font-awesome :icon="['fab', 'github']"
+                /></a>
+                <a
+                  href="https://dev.to/opendevs_2020"
+                  class="brand-icon text-green-400"
+                  ><font-awesome :icon="['fab', 'dev']"
+                /></a>
+                <a
+                  href="https://medium.com/@opendevs_2020"
+                  class="brand-icon text-green-400"
+                  ><font-awesome :icon="['fab', 'medium']"
+                /></a>
               </div>
             </div>
           </div>
@@ -294,6 +268,6 @@
 export default {
   metaInfo: {
     title: 'Home',
-  },
+  }
 };
 </script>

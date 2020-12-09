@@ -245,21 +245,25 @@
                 </p>
                 <a
                   href="mailto:open.devs.github@gmail.com"
+                  target="_blank"
                   class="brand-icon text-green-400"
                   ><font-awesome :icon="['fas', 'envelope']"
                 /></a>
                 <a
                   href="https://github.com/open-devs"
+                  target="_blank"
                   class="brand-icon text-green-400"
                   ><font-awesome :icon="['fab', 'github']"
                 /></a>
                 <a
                   href="https://dev.to/opendevs_2020"
+                  target="_blank"
                   class="brand-icon text-green-400"
                   ><font-awesome :icon="['fab', 'dev']"
                 /></a>
                 <a
                   href="https://medium.com/@opendevs_2020"
+                  target="_blank"
                   class="brand-icon text-green-400"
                   ><font-awesome :icon="['fab', 'medium']"
                 /></a>

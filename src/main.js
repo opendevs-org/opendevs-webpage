@@ -6,13 +6,13 @@ import DefaultLayout from '~/layouts/Default.vue';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import { config, library } from '@fortawesome/fontawesome-svg-core';
 import { faArrowLeft, faArrowRight, faSun, faMoon, faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { faGithub, faMedium, faDev } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faMedium, faDev, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import '~/assets/styles/reset.scss';
 import '~/assets/styles/global.scss';
 
 config.autoAddCss = false;
-library.add(faArrowLeft, faSun, faMoon, faEnvelope, faGithub, faMedium, faDev, faArrowRight);
+library.add(faArrowLeft, faSun, faMoon, faEnvelope, faGithub, faMedium, faDev, faArrowRight, faLinkedin, faTwitter);
 
 export default function (Vue, { router, head, isClient }) {
   Vue.component('font-awesome', FontAwesomeIcon);

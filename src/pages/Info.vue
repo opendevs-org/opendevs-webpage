@@ -1,78 +1,75 @@
 <template>
   <Layout page="info">
-    <section class="info__blurb">
-      <div v-html="data.description"></div>
-      <ul>
-        <li>
-          <p>
-            <a :href="`mailto:${data.contact.email}`">
-              Email: {{ data.contact.email }}
-            </a>
-          </p>
-        </li>
-        <li>
-          <p>
-            <a :href="`https://github.com/${data.contact.github_handle}`">
-              Github: {{ data.contact.github_handle }}
-            </a>
-          </p>
-        </li>
-      </ul>
-    </section>
-    <section class="info__blurb">
-      <div><em>Contributers</em></div>
-      <ul>
-        <li>
-          <em>Email:</em>
-          <p>
-            <a class="contributor" :href="`mailto:${data.contributer1.email}`">
-              {{ data.contributer1.email }} </a
-            >,
-            <a class="contributor" :href="`mailto:${data.contributer2.email}`">
-              {{ data.contributer2.email }}
-            </a>
-          </p>
-        </li>
-        <li>
-          <em>Github:</em>
-          <p>
-            <a
-              class="contributor"
-              :href="`https://github.com/${data.contributer1.github_handle}`"
+    <div class="container relative mx-auto">
+      <div class="items-center flex flex-wrap">
+        <div class="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
+          <div class="py-4">
+            <h1 class="font-semibold text-5xl underline">the craftsmen</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="p-8 flex items-center justify-center"
+      style="background: #edf2f7"
+    >
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-3 gap-4"
+      >
+        <div v-for="member in data" :key="member.email" class="shadow-xl transform transition duration-500 hover:scale-105">
+          <div
+            class="flex flex-col items-center justify-center bg-white p-4 shadow rounded-lg"
+          >
+            <div
+              class="inline-flex shadow-lg border border-gray-200 rounded-full overflow-hidden h-40 w-40"
             >
-              {{ data.contributer1.github_handle }} </a
-            >,
-            <a
-              class="contributor"
-              :href="`https://github.com/${data.contributer2.github_handle}`"
-            >
-              {{ data.contributer2.github_handle }}
-            </a>
-          </p>
-        </li>
-        <li>
-          <em>LinkedIn:</em>
-          <p>
-            <a
-              class="contributor"
-              :href="
-                `https://linkedin.com/in/${data.contributer1.linkedin_handle}`
-              "
-            >
-              {{ data.contributer1.linkedin_handle }} </a
-            >,
-            <a
-              class="contributor"
-              :href="
-                `https://linkedin.com/in/${data.contributer2.linkedin_handle}`
-              "
-            >
-              {{ data.contributer2.linkedin_handle }}
-            </a>
-          </p>
-        </li>
-      </ul>
-    </section>
+              <img
+                :src="member.avatar"
+                alt=""
+                class="h-full w-full"
+              />
+            </div>
+
+            <h2 class="mt-4 font-bold text-xl">{{ member.name }}</h2>
+
+            <p class="text-xs text-gray-500 text-center mt-3">
+             {{ member.quote }}
+            </p>
+
+            <ul class="flex flex-row mt-4 space-x-2">
+              <li>
+                <a
+                  :href="member.email"
+                  class="brand-icon text-green-400"
+                  ><font-awesome :icon="['fas', 'envelope']"
+                /></a>
+              </li>
+              <li>
+                <a
+                  :href="member.github_handle"
+                  class="brand-icon text-green-400"
+                  ><font-awesome :icon="['fab', 'github']"
+                /></a>
+              </li>
+              <li>
+               <a
+                  :href="member.linkedin_handle"
+                  class="brand-icon text-green-400"
+                  ><font-awesome :icon="['fab', 'linkedin']"
+                /></a>
+              </li>
+              <li>
+                <a
+                  :href="member.twitter_handle"
+                  class="brand-icon text-green-400"
+                  ><font-awesome :icon="['fab', 'twitter']"
+                /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
   </Layout>
 </template>
 
@@ -82,14 +79,12 @@ export default {
     return {
       title: 'Info',
       bodyAttrs: {
-        style: `background-color: ${this.data.background_color}; color: ${
-          this.data.text_color
-        }`,
+        style: `background-color: ${this.data.background_color}; color: ${this.data.text_color}`,
       },
     };
   },
   computed: {
-    data: function() {
+    data: function () {
       return this.$page.metadata.infoData;
     },
   },
@@ -100,23 +95,13 @@ export default {
     query getInfoPageData {
         metadata {
             infoData {
-                description
-                contact {
-                    email
-                    github_handle
-                }
-                contributer1 {
-                    email
-                    github_handle
-                    linkedin_handle
-                }
-                contributer2 {
-                    email
-                    github_handle
-                    linkedin_handle
-                }
-                background_color
-                text_color
+              name
+              email
+              avatar
+              quote
+              github_handle
+              linkedin_handle
+              twitter_handle
             }
         }
     }

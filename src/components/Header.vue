@@ -7,7 +7,7 @@
         <h1>{{ $static.metadata.siteName }}</h1>
       </g-link>
 
-      <div class="back-button" v-else @click="goBack()">
+      <div class="back-button" v-else @click="hasHistory() ? $router.go(-1) : $router.push('/')">
         <font-awesome :icon="['fas', 'arrow-left']"/> <h1> {{ $static.metadata.siteName }}</h1>
       </div>
 
@@ -78,9 +78,8 @@ export default {
       this.isDark = document.documentElement.classList.contains('dark-mode');
     },
 
-    goBack () {
-      this.$router.go(-1);
-    }
+    hasHistory () { return window.history.length > 2; }
+
   }
 };
 </script>

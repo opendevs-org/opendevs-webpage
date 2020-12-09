@@ -40,7 +40,7 @@
                 <a
                   v-if="member.email"
                   :href="member.email"
-                  class="text-green-400"
+                  class="brand-icon text-green-400"
                   ><font-awesome :icon="['fas', 'envelope']"
                 /></a>
               </li>
@@ -48,7 +48,7 @@
                 <a
                   v-if="member.github_handle"
                   :href="member.github_handle"
-                  class="text-green-400"
+                  class="brand-icon text-green-400"
                   ><font-awesome :icon="['fab', 'github']"
                 /></a>
               </li>
@@ -56,7 +56,7 @@
                <a
                   v-if="member.linkedin_handle"
                   :href="member.linkedin_handle"
-                  class="text-green-400"
+                  class="brand-icon text-green-400"
                   ><font-awesome :icon="['fab', 'linkedin']"
                 /></a>
               </li>
@@ -64,7 +64,7 @@
                 <a
                   v-if="member.twitter_handle"
                   :href="member.twitter_handle"
-                  class="text-green-400"
+                  class="brand-icon text-green-400"
                   ><font-awesome :icon="['fab', 'twitter']"
                 /></a>
               </li>

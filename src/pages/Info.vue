@@ -10,15 +10,14 @@
       </div>
     </div>
     <div
-      class="p-8 flex items-center justify-center"
-      style="background: #edf2f7"
+      class="p-8 flex items-center justify-center info-card-section"
     >
       <div
-        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-3 gap-4"
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-3 gap-6"
       >
         <div v-for="member in data" :key="member.email" class="shadow-xl transform transition duration-500 hover:scale-105">
           <div
-            class="flex flex-col items-center justify-center bg-white p-4 shadow rounded-lg"
+            class="flex flex-col items-center justify-center bg-white p-4 shadow rounded-lg height-100"
           >
             <div
               class="inline-flex shadow-lg border border-gray-200 rounded-full overflow-hidden h-40 w-40"
@@ -32,36 +31,40 @@
 
             <h2 class="mt-4 font-bold text-xl">{{ member.name }}</h2>
 
-            <p class="text-xs text-gray-500 text-center mt-3">
+            <p class="text-xs text-gray-500 text-center mt-3 ellipsis">
              {{ member.quote }}
             </p>
 
             <ul class="flex flex-row mt-4 space-x-2">
               <li>
                 <a
+                  v-if="member.email"
                   :href="member.email"
-                  class="brand-icon text-green-400"
+                  class="text-green-400"
                   ><font-awesome :icon="['fas', 'envelope']"
                 /></a>
               </li>
               <li>
                 <a
+                  v-if="member.github_handle"
                   :href="member.github_handle"
-                  class="brand-icon text-green-400"
+                  class="text-green-400"
                   ><font-awesome :icon="['fab', 'github']"
                 /></a>
               </li>
               <li>
                <a
+                  v-if="member.linkedin_handle"
                   :href="member.linkedin_handle"
-                  class="brand-icon text-green-400"
+                  class="text-green-400"
                   ><font-awesome :icon="['fab', 'linkedin']"
                 /></a>
               </li>
               <li>
                 <a
+                  v-if="member.twitter_handle"
                   :href="member.twitter_handle"
-                  class="brand-icon text-green-400"
+                  class="text-green-400"
                   ><font-awesome :icon="['fab', 'twitter']"
                 /></a>
               </li>
@@ -109,7 +112,6 @@ export default {
 
 <style lang="scss">
 .info__blurb {
-  max-width: 800px;
   padding: 1.5rem 1.25rem;
   p {
     font-size: 1.4rem;
@@ -124,15 +126,23 @@ export default {
   }
 }
 
-@media (min-width: 768px) {
-  .info__blurb {
-    padding: 2rem;
+.info-card-section {
+
+  background-color: #e2e8f0;
+  min-height: calc(100vh - 153.31px);
+
+  .ellipsis {
+    width: 300px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .height-100 {
+    height: 100%;
   }
 }
 
-@media (min-width: 1440px) {
-  .info__blurb {
-    padding: 3rem;
-  }
-}
+
+
 </style>

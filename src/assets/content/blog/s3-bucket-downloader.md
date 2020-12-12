@@ -1,6 +1,6 @@
 ---
 title: s3 bucket downloader, a easy way to download files from AWS s3
-author: open devs
+author: mihir kumar
 date: 2020-10-28T07:00:00Z
 hero_image: "https://cdn.mindmajix.com/blog/images/aws-s3-230819.png"
 
@@ -15,21 +15,21 @@ If you choose the same directory as previous time, it'll `sync` those changes.
 
 > It now supports setting of aws config like AWS Access key ID, AWS Secret key, AWS region & Output format in interactive mode
 
-### 🏠 [Homepage](https://github.com/MiKr13/S3-Bucket-Download/#README)
+### 🏠 [homepage](https://github.com/open-devs/S3-Bucket-Download/#README)
 
-<!--### ✨ [Demo](https://github.com/MiKr13/S3-Bucket-Download/#README) -->
+### ✨ [npm link](https://www.npmjs.com/package/s3-bucket-downloader)
 
-## Install
+## install
 
 ```sh
 npm i -g s3-bucket-downloader
 ```
 
-## Usage
+## usage
 
-_Run anyone of following commands (only interactive mode available currently):_
+_run anyone of following commands (only interactive mode available currently):_
 
-> Interactive mode now supports setting of aws config like AWS **Access key ID**, **Secret key**, **Region** & **Output format** in interactive mode if none present in the system.
+> interactive mode now supports setting of aws config like AWS **access key ID**, **secret key**, **region** & **output format** in interactive mode if none present in the system.
 
 ```sh
 s3
@@ -39,19 +39,19 @@ s3-downloader
 s3-bucket-downloader
 ```
 
-## Usage (advanced user)
+## usage (advanced user)
 
-> Advanced users have to set AWS config themselves for now
+> advanced users have to set AWS config themselves for now
 
-### _Interactive mode:_
+### _interactive mode:_
 
 ```sh
 node download
 ```
 
-> It'll display list of all buckets in an array & ask for options like:
+> it'll display list of all buckets in an array & ask for options like:
 
-![Interactive mode options](../images/interactive-mode.png)
+![interactive mode options](../images/interactive-mode.png)
 
 ### _CLI mode:_
 
@@ -59,21 +59,21 @@ node download
 node download --bucketName=[comma,seperated,bucketnames] --path=[path to save to for ex: ../data]
 ```
 
-> Without brackets ofcourse.
+> without brackets ofcourse.
 
-### _Download All mode:_
+### _download all mode:_
 
 ```sh
 node download --all
 ```
 
-> Just downloads all of the files in all of the buckets.
+> just downloads all of the files in all of the buckets.
 
-## Logs:
+## logs:
 
->It shows logs too, like these:
+>it shows logs too, like these:
 
-![Interactive mode options](../images/logs.png)
+![interactive mode options](../images/logs.png)
 
 ## who are we?
 

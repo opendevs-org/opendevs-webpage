@@ -1,6 +1,6 @@
 ---
 title: fastify typeScript generator, a generator for creating fastify server with typescript
-author: open devs
+author: mihir kumar
 date: 2020-09-01T07:00:00Z
 hero_image: "https://miro.medium.com/max/2560/1*V8vAkYA9QOi-gLKh68mtOg.jpeg"
 
@@ -39,8 +39,7 @@ we created this generator keeping few things in mind:
 
 so please check it out. it’s already gaining tracking in the community.
 
-### npm
-[https://www.npmjs.com/package/fastify-typescript-generator](https://www.npmjs.com/package/fastify-typescript-generator)
+### ✨ [npm link](https://www.npmjs.com/package/fastify-typescript-generator)
 
 ## how to use it?
 

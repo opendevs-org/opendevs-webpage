@@ -1,11 +1,10 @@
 {
-    "title": "open devs",
-    "description": "An organization of two motivated developers, building open source enterprise level softwares to contribute to community",
-    "contact": {
-      "email": "open.devs.github@gmail.com",
-      "github_handle": "Open-Devs"
-    },
-    "primary_color": "#ACCAC5",
-    "repository_url": "https://github.com/Open-Devs"
-  }
-  
+  "title": "open devs",
+  "description": "An organization of motivated developers, building open source enterprise level softwares to contribute to community",
+  "contact": {
+    "email": "open.devs.github@gmail.com",
+    "github_handle": "Open-Devs"
+  },
+  "primary_color": "#ACCAC5",
+  "repository_url": "https://github.com/Open-Devs"
+}

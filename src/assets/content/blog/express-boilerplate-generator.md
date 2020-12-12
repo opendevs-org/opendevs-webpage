@@ -1,6 +1,6 @@
 ---
 title: express boilerplate generator, a generator for scaffolding express basic setup with ease
-author: open devs
+author: mihir kumar
 date: 2020-11-28T07:00:00Z
 hero_image: "https://miro.medium.com/max/2400/1*xK8B_iiUSK_eU3jyG79djA.jpeg"
 
@@ -8,11 +8,14 @@ hero_image: "https://miro.medium.com/max/2400/1*xK8B_iiUSK_eU3jyG79djA.jpeg"
 hi everyone, 👋
 today we’ll learn about how use a tool that generates new [express](https://expressjs.com/) applications in everyone's favourite language [typescript](https://github.com/microsoft/TypeScript) with various options to choose from based on your project needs
 
+### 🏠 [homepage](https://github.com/open-devs/express-boilerplate-generator#README)
+
+### ✨ [npm link](https://www.npmjs.com/package/express-boilerplate-generator)
 
 ## install
 
 ```sh
-$ npm i -g express-boilerplate-generator
+npm i -g express-boilerplate-generator
 ```
 
 ## usage

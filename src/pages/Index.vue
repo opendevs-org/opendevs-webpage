@@ -16,10 +16,12 @@
             <div class="items-center flex flex-wrap">
               <div class="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
                 <div class="py-4">
-                  <h1 class="font-semibold text-5xl">open devs</h1>
+                  <h1 class="font-semibold text-5xl">
+                    {{ $page.metadata.siteName }}
+                  </h1>
                   <p class="mt-4 text-lg text-gray-600">
-                    open devs is an organization created by two motivated
-                    developers (<a
+                    {{ $page.metadata.siteName }} is an organization created by
+                    two motivated developers (<a
                       class="contributor"
                       :href="`https://linkedin.com/in/mikr13`"
                       >@mikr13</a
@@ -29,7 +31,9 @@
                       :href="`https://linkedin.com/in/alok722`"
                       >@alok722</a
                     >) building open source software to contribute to the
-                    community. ✌
+                    community. we are looking forward to meet other
+                    <strong>awesome</strong> poeple and build stuff together.<br />so
+                    come, join us ✌
                   </p>
                   <g-link to="/blogs/" class="py-12">
                     <button
@@ -279,7 +283,16 @@
 <script>
 export default {
   metaInfo: {
-    title: 'Home',
+    title: "Home",
   },
 };
 </script>
+
+<page-query>
+  query getConfigData {
+    metadata {
+      siteName
+      siteDescription
+    }
+  }
+</page-query>

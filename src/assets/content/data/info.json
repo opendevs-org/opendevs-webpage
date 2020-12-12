@@ -1,4 +1,13 @@
 [{
+    "name": "you ?",
+    "email": "",
+    "avatar": "https://tmi.butte.edu/wp-content/uploads/2017/11/blank_profile_questionmark.png",
+    "quote": "quote that defines you?",
+    "github_handle": "",
+    "linkedin_handle": "",
+    "twitter_handle": ""
+  },
+  {
     "name": "alok raj",
     "email": "mailto:alokr417@gmail.com",
     "avatar": "/alok.jpg",
@@ -14,15 +23,6 @@
     "quote": "we bring definition to words of our life.",
     "github_handle": "https://github.com/mikr13",
     "linkedin_handle": "https://www.linkedin.com/in/mikr13/",
-    "twitter_handle": ""
-  },
-  {
-    "name": "you ?",
-    "email": "",
-    "avatar": "https://tmi.butte.edu/wp-content/uploads/2017/11/blank_profile_questionmark.png",
-    "quote": "quote that defines you?",
-    "github_handle": "",
-    "linkedin_handle": "",
     "twitter_handle": ""
   }
 ]

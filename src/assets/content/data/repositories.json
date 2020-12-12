@@ -1,0 +1,14 @@
+[
+  {
+    "name": "dinero.js",
+    "featured": true
+  },
+  {
+    "name": "snippets.js",
+    "featured": false
+  },
+  {
+    "name": "browserstore.js",
+    "featured": false
+  }
+]

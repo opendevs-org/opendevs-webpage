@@ -11,10 +11,60 @@ import '@fortawesome/fontawesome-svg-core/styles.css';
 import '~/assets/styles/reset.scss';
 import '~/assets/styles/global.scss';
 
+export const bus = new Vue();
+
 config.autoAddCss = false;
 library.add(faArrowLeft, faSun, faMoon, faEnvelope, faGithub, faMedium, faDev, faArrowRight, faLinkedin, faTwitter);
 
-export default function (Vue, { router, head, isClient }) {
+const title = "open devs";
+const description = [
+  "open devs",
+  "an organization of motivated developers, building open source enterprise level softwares to contribute to community",
+  "TypeScript, JavaScript, React.js, Vue.js, CSS",
+].join(" | ");
+
+const metadata = [
+  {
+    name: "description",
+    content: description,
+  },
+  {
+    name: "author",
+    content: title,
+  }
+];
+
+const openGraph = [
+  {
+    name: "og:title",
+    content: title,
+  },
+  {
+    name: "og:site_name",
+    content: title,
+  },
+  {
+    name: "og:image",
+    content: "/open-devs-white.png",
+  },
+  {
+    name: "og:description",
+    content: description,
+  },
+];
+
+export default function (Vue, { head, isClient }) {
+  if (isClient) {
+    const vueSmoothScroll = require("vue2-smooth-scroll").default;
+    const resize = require("vue-resize-directive");
+    const { ObserveVisibility } = require("vue-observe-visibility");
+
+    Vue.use(vueSmoothScroll);
+    Vue.directive("resize", resize);
+    Vue.directive("observe-visibility", ObserveVisibility);
+  }
   Vue.component('font-awesome', FontAwesomeIcon);
   Vue.component('Layout', DefaultLayout);
+  head.meta.push(...metadata.concat(openGraph));
+
 }

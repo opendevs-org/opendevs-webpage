@@ -1,0 +1,142 @@
+[
+  {
+    "title": "State Machines in Vue 3",
+    "event": "VueConf Toronto",
+    "isOnline": true,
+    "date": "2020-11-04"
+  },
+  {
+    "title": "Learning from the Mistakes of a v1",
+    "event": "JSCONF.BE",
+    "isOnline": true,
+    "date": "2020-06-23",
+    "links": [
+      {
+        "label": "Slides",
+        "link": "https://noti.st/sarahdayan/zjFPFu/learning-from-the-mistakes-of-a-v1"
+      }
+    ]
+  },
+  {
+    "title": "Why Javascript Numbers Are Weird (And How to Fix It)",
+    "event": "Frontend Love Meetup",
+    "isOnline": true,
+    "date": "2020-03-19",
+    "links": [
+      {
+        "label": "Video",
+        "link": "https://youtu.be/Wq2AqONg7rs"
+      },
+      {
+        "label": "Slides",
+        "link": "https://noti.st/sarahdayan/BAyJrr/why-javascript-numbers-are-weird-and-how-to-fix-it"
+      }
+    ]
+  },
+  {
+    "title": "Test-Driven Development with Vue.js",
+    "event": "Vue.js Amsterdam",
+    "location": {
+      "city": "Amsterdam",
+      "country": "The Netherlands"
+    },
+    "date": "2020-02-21",
+    "links": [
+      {
+        "label": "Video",
+        "link": "https://youtu.be/OPWcqgqiJao"
+      },
+      {
+        "label": "Slides",
+        "link": "https://noti.st/sarahdayan/q0xtRN/test-driven-development-with-vue-js"
+      }
+    ]
+  },
+  {
+    "title": "In Defense of Utility-First CSS",
+    "event": "dotCSS",
+    "location": {
+      "city": "Paris",
+      "country": "France"
+    },
+    "date": "2019-12-04",
+    "links": [
+      {
+        "label": "Video",
+        "link": "https://youtu.be/R50q4NES6Iw"
+      },
+      {
+        "label": "Slides",
+        "link": "https://noti.st/sarahdayan/pmD0XT/in-defense-of-utility-first-css"
+      }
+    ]
+  },
+  {
+    "title": "Test-Driven Development with Vue.js",
+    "event": "VueConf Toronto",
+    "location": {
+      "city": "Toronto",
+      "country": "Canada"
+    },
+    "date": "2019-11-11",
+    "links": [
+      {
+        "label": "Video",
+        "link": "https://www.youtube.com/watch?v=DD1fEhcEzY8"
+      },
+      {
+        "label": "Slides",
+        "link": "https://noti.st/sarahdayan/S5voPs/test-driven-development-with-vue-js"
+      }
+    ]
+  },
+  {
+    "title": "An Introduction to TDD with Vue.js",
+    "event": "Vue.js Paris #20",
+    "location": {
+      "city": "Paris",
+      "country": "France"
+    },
+    "date": "2019-06-05",
+    "links": [
+      {
+        "label": "Slides",
+        "link": "https://noti.st/sarahdayan/4PecIH/an-introduction-to-tdd-with-vue-js"
+      }
+    ]
+  },
+  {
+    "title": "Scaling With(out) Middleman",
+    "event": "JAMstack Paris",
+    "location": {
+      "city": "Paris",
+      "country": "France"
+    },
+    "date": "2019-05-28",
+    "links": [
+      {
+        "label": "Video",
+        "link": "https://youtu.be/6feV1DrCBdE"
+      }
+    ]
+  },
+  {
+    "title": "Building an Interactive Showcase with Vue.js & Vue InstantSearch",
+    "event": "Vue.js Paris #19",
+    "location": {
+      "city": "Paris",
+      "country": "France"
+    },
+    "date": "2019-01-15",
+    "links": [
+      {
+        "label": "Video",
+        "link": "https://www.youtube.com/watch?v=Zw-Ie5zPhYk"
+      },
+      {
+        "label": "Slides",
+        "link": "https://noti.st/sarahdayan/gjNQAg/building-an-interactive-showcase-with-vue-js-vue-instantsearch"
+      }
+    ]
+  }
+]

@@ -1,128 +1,97 @@
 <template>
-  <div
-    v-resize:debounce="onResize"
-    class="flex flex-col mx-auto font-sans text-base text-dawn md:flex-row"
-  >
-    <top-bar :shift="isIntroVisible" />
+  <Layout page="portfolio">
     <div
-      v-observe-visibility="onIntroVisibilityChange"
       class="static flex flex-col justify-between p-32 md:max-w-408 lg:max-w-496 md:fixed md:h-screen lg:py-88 lg:pl-88 md:pr-0"
     >
       <div class="flex flex-col">
+        <h1
+          class="text-2xl font-bold leading-tight lg:text-4xl lg:leading-none text-zenith"
+        >
+          hello, i’m {{ data.name }}.
+        </h1>
         <div>
-          <h1
-            class="text-2xl font-bold leading-tight lg:text-4xl lg:leading-none text-zenith"
+          <p class="mt-12" v-html="data.intro" />
+        </div>
+      </div>
+      <div class="flex flex-row">
+        <div class="shadow-xl w-408">
+          <div
+            class="flex flex-col items-center justify-center bg-white p-4 shadow rounded-lg height-100"
           >
-            Hello, I’m Sarah Dayan.
-          </h1>
-          <div class="leading-loose">
-            <p class="mt-32">
-              I’m a Staff Software Engineer currently working as Tech Lead of
-              the Doc Squad at
-              <a
-                class="underline text-zenith"
-                href="https://www.algolia.com/"
-                target="_blank"
-                rel="noopener"
-                >Algolia</a
-              >. I mostly do front-end development, and I’m a
-              <a
-                class="underline text-zenith"
-                href="https://vuejs.org/"
-                rel="noopener"
-                >Vue.js</a
-              >
-              and CSS nerd. I can't shut up about test-driven development and
-              utility-first CSS. I also share what I learn on my blog
-              <a
-                class="underline text-zenith"
-                href="http://frontstuff.io"
-                target="_blank"
-                rel="noopener"
-                >frontstuff.io</a
-              >, or at meetups and conferences.
+            <div
+              class="inline-flex shadow-lg border border-gray-200 rounded-full overflow-hidden h-40 w-40"
+            >
+              <img :src="data.avatar" alt="" class="h-full w-full" />
+            </div>
+
+            <p class="text-xs text-gray-500 text-center mt-3 ellipsis">
+              {{ data.quote }}
             </p>
+
+            <ul class="flex flex-row mt-4 space-x-2">
+              <li>
+                <a
+                  v-if="data.email"
+                  target="_blank"
+                  :href="data.email"
+                  class="brand-icon"
+                  ><font-awesome :icon="['fas', 'envelope']"
+                /></a>
+              </li>
+              <li>
+                <a
+                  v-if="data.github_handle"
+                  target="_blank"
+                  :href="data.github_handle"
+                  class="brand-icon"
+                  ><font-awesome :icon="['fab', 'github']"
+                /></a>
+              </li>
+              <li>
+                <a
+                  v-if="data.linkedin_handle"
+                  target="_blank"
+                  :href="data.linkedin_handle"
+                  class="brand-icon"
+                  ><font-awesome :icon="['fab', 'linkedin']"
+                /></a>
+              </li>
+              <li>
+                <a
+                  v-if="data.twitter_handle"
+                  target="_blank"
+                  :href="data.twitter_handle"
+                  class="brand-icon"
+                  ><font-awesome :icon="['fab', 'twitter']"
+                /></a>
+              </li>
+            </ul>
           </div>
         </div>
-        <scroll-spy
-          class="hidden mt-72 md:block"
-          :active="active"
-          :items="items"
-        />
-      </div>
-      <div class="flex items-center w-full mt-32 md:mt-72">
-        <g-image
-          alt="Sarah Dayan's headshot"
-          src="https://picsum.photos/350/165?random"
-          class="w-48 h-48 mr-32 rounded-full"
-        />
-        <social-links />
+        <div v-if="data.projects" id="projects">
+          <h2
+            class="pt-24 text-sm font-bold tracking-widest uppercase md:sr-only text-zenith"
+          >
+            Projects
+          </h2>
+          <all-projects class="pb-40 md:py-0" :items="data.projects" />
+        </div>
+        <div v-if="data.talks" id="data.talks">
+          <h2
+            class="pt-24 text-sm font-bold tracking-widest uppercase md:sr-only text-zenith"
+          >
+            Talks
+          </h2>
+          <all-talks class="pb-40 md:py-0" :items="data.talks" />
+        </div>
       </div>
     </div>
-    <div
-      class="static p-32 md:max-w-536 lg:max-w-736 md:absolute md:right-0 lg:py-88 lg:pr-88 md:pl-0"
-    >
-      <Layout>
-        <ClientOnly>
-          <div
-            id="projects"
-            v-observe-visibility="onVisibilityChange(0)"
-            class="md:pt-88 md:-mt-96"
-          >
-            <h2
-              class="sticky top-0 z-40 pt-24 text-sm font-bold tracking-widest uppercase md:sr-only text-zenith"
-            >
-              Projects
-            </h2>
-            <all-projects class="pt-32 pb-40 md:py-0" :items="[]" />
-          </div>
-          <div
-            id="talks"
-            v-observe-visibility="onVisibilityChange(1)"
-            class="md:pt-88"
-          >
-            <h2
-              class="sticky top-0 z-40 pt-24 text-sm font-bold tracking-widest uppercase md:sr-only text-zenith"
-            >
-              Talks
-            </h2>
-            <all-talks class="pt-32 pb-40 md:py-0" :items="[]" />
-          </div>
-          <p
-            v-observe-visibility="showDesignerLine"
-            :class="[
-              shouldShowDesignerLine ? 'opacity-75' : 'opacity-0 shift-y-16',
-            ]"
-            class="text-sm mt-104 ml-104 md:ml-160 transition"
-          >
-            Design by
-            <a
-              class="text-sunrise hover:text-zenith transition hover:underline"
-              href="https://dribbble.com/NicolasMzrd"
-              target="_blank"
-              rel="noopener"
-              >Nicolas Meuzard</a
-            >.
-          </p>
-        </ClientOnly>
-      </Layout>
-    </div>
-    <div
-      class="fixed bottom-0 left-0 z-20 w-full h-32 pointer-events-none gradient-y-transparent-night"
-    />
-    <div
-      class="fixed top-0 left-0 z-20 w-full h-32 pointer-events-none gradient-y-night-transparent"
-    />
-  </div>
+  </Layout>
 </template>
 
 <script>
-import { bus } from "@/main";
-import ScrollSpy from "../../partials/ScrollSpy";
-import TopBar from "../../partials/TopBar";
 import AllProjects from "../../partials/AllProjects";
 import AllTalks from "../../partials/AllTalks";
-import SocialLinks from "../../partials/SocialLinks";
 export default {
   metaInfo: {
     bodyAttrs: {
@@ -130,66 +99,76 @@ export default {
     },
   },
   components: {
-    ScrollSpy,
-    TopBar,
     AllProjects,
     AllTalks,
-    SocialLinks,
   },
   data() {
     return {
       username: null,
-      visibleSections: [],
-      shouldShowDesignerLine: false,
-      isIntroVisible: true,
       items: [
         { label: "Projects", link: "#projects" },
         { label: "Talks", link: "#talks" },
-        { label: "Interviews", link: "#interviews" },
       ],
-      active: 0,
     };
   },
-  created() {
-    bus.$on("update:scrollspy", (index) => {
-      this.active = index || 0;
-    });
+  computed: {
+    data() {
+      if (
+        this.username &&
+        this.$page.metadata.infoData &&
+        this.$page.metadata.infoData.length
+      ) {
+        const userData = this.$page.metadata.infoData.filter(
+          (el) => el.username.toLowerCase() === this.username.toLowerCase()
+        );
+        return userData ? userData[0] : {};
+      } else {
+        return {};
+      }
+    },
+  },
+  watch: {
+    data(val) {
+      if (!val) {
+        this.$router.push("/");
+      }
+    },
   },
   async mounted() {
     const { username } = this.$route.params;
     this.username = username;
   },
-  methods: {
-    onVisibilityChange(index) {
-      return {
-        callback: (isVisible) => {
-          if (isVisible) {
-            this.visibleSections.push(index);
-          } else {
-            this.visibleSections = this.visibleSections.filter((item) => {
-              return item !== index;
-            });
-          }
-
-          this.visibleSections.sort();
-
-          bus.$emit("update:scrollspy", this.visibleSections[0]);
-        },
-        intersection: {
-          threshold: 0.3,
-        },
-        throttle: 300,
-      };
-    },
-    showDesignerLine(isVisible) {
-      this.shouldShowDesignerLine = isVisible;
-    },
-    onResize({ offsetWidth }) {
-      bus.$emit("resize:window", offsetWidth);
-    },
-    onIntroVisibilityChange(isVisible) {
-      this.isIntroVisible = isVisible;
-    },
-  },
 };
 </script>
+
+<page-query>
+  query getInfoPageData {
+    metadata {
+      infoData {
+        name
+        username
+        intro
+        email
+        avatar
+        quote
+        github_handle
+        linkedin_handle
+        twitter_handle
+        talks {
+          title
+          event
+          isOnline
+          date
+          links {
+            label
+            link
+          }
+        }
+        projects {
+          name
+          featured
+        }
+      }
+    }
+  }
+</page-query>

@@ -8,7 +8,7 @@
     "build": "gridsome build",
     "dev": "gridsome develop",
     "explore": "gridsome explore",
-    "opendevs-preview": "gridsome develop -p 8080 --host 0.0.0.0",
+    "od": "gridsome develop -p 8080 --host 0.0.0.0",
     "commit-a": "git add . && git cz",
     "commit": "git cz",
     "lint": "vue-cli-service lint",
@@ -18,8 +18,8 @@
   "dependencies": {
     "@gridsome/source-filesystem": "^0.6.2",
     "@gridsome/transformer-remark": "^0.6.3",
+    "autoprefixer": "^10.1.0",
     "bowser": "^2.11.0",
-    "gh-pages": "^3.1.0",
     "gridsome": "^0.7.21"
   },
   "devDependencies": {
@@ -35,12 +35,19 @@
     "eslint": "^7.12.1",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-vue": "^7.1.0",
+    "gh-pages": "^3.1.0",
     "git-cz": "^4.7.1",
-    "gridsome-plugin-tailwindcss": "^3.0.1",
+    "gridsome-plugin-tailwindcss": "^4.1.1",
     "hex-to-rgb": "1.0.1",
-    "postcss-selector-parser": "6.0.4",
     "node-sass": "^5.0.0",
-    "sass-loader": "^10.0.5"
+    "postcss": "^8.1.9",
+    "postcss-import": "12.0.1",
+    "postcss-preset-env": "^6.7.0",
+    "sass-loader": "^10.1.0",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.2",
+    "vue-observe-visibility": "^0.4.6",
+    "vue-resize-directive": "^1.2.0",
+    "vue2-smooth-scroll": "^1.5.0"
   },
   "keywords": [
     "gridsome",

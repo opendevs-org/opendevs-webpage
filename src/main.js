@@ -11,7 +11,7 @@ import '@fortawesome/fontawesome-svg-core/styles.css';
 import '~/assets/styles/reset.scss';
 import '~/assets/styles/global.scss';
 
-export const bus = new Vue();
+export let bus;
 
 config.autoAddCss = false;
 library.add(faArrowLeft, faSun, faMoon, faEnvelope, faGithub, faMedium, faDev, faArrowRight, faLinkedin, faTwitter);
@@ -54,6 +54,7 @@ const openGraph = [
 ];
 
 export default function (Vue, { head, isClient }) {
+  bus = Vue;
   if (isClient) {
     const vueSmoothScroll = require("vue2-smooth-scroll").default;
     const resize = require("vue-resize-directive");

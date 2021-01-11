@@ -7,8 +7,7 @@ module.exports = {
   host: process.env.HOSTNAME,
   port: 8080,
   siteUrl: 'https://www.opendevs.in',
-  //----------------
-  //make editable config & data files available to graphql
+
   metadata: {
     siteName: config.title,
     siteDescription: config.description,

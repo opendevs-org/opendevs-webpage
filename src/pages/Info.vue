@@ -14,8 +14,8 @@
         class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-3 gap-6"
       >
         <div
-          v-for="member in data"
-          :key="member.email"
+          v-for="{ node } in data"
+          :key="node.email"
           class="shadow-xl transform transition duration-500 hover:scale-105"
         >
           <div
@@ -24,48 +24,48 @@
             <div
               class="inline-flex shadow-lg border border-gray-200 rounded-full overflow-hidden h-40 w-40"
             >
-              <img :src="member.avatar" alt="" class="h-full w-full" />
+              <img :src="node.avatar" alt="" class="h-full w-full" />
             </div>
 
-            <h2 class="mt-4 font-bold text-xl">{{ member.name }}</h2>
+            <h2 class="mt-4 font-bold text-xl">{{ node.name }}</h2>
 
             <p class="text-xs text-gray-500 text-center mt-3 ellipsis">
-              {{ member.quote }}
+              {{ node.quote }}
             </p>
 
             <ul class="flex flex-row mt-4 space-x-2">
               <li>
                 <a
-                  v-if="member.email"
+                  v-if="node.email"
                   target="_blank"
-                  :href="member.email"
+                  :href="node.email"
                   class="brand-icon text-green-400"
                   ><font-awesome :icon="['fas', 'envelope']"
                 /></a>
               </li>
               <li>
                 <a
-                  v-if="member.github_handle"
+                  v-if="node.github_handle"
                   target="_blank"
-                  :href="member.github_handle"
+                  :href="node.github_handle"
                   class="brand-icon text-green-400"
                   ><font-awesome :icon="['fab', 'github']"
                 /></a>
               </li>
               <li>
                 <a
-                  v-if="member.linkedin_handle"
+                  v-if="node.linkedin_handle"
                   target="_blank"
-                  :href="member.linkedin_handle"
+                  :href="node.linkedin_handle"
                   class="brand-icon text-green-400"
                   ><font-awesome :icon="['fab', 'linkedin']"
                 /></a>
               </li>
               <li>
                 <a
-                  v-if="member.twitter_handle"
+                  v-if="node.twitter_handle"
                   target="_blank"
-                  :href="member.twitter_handle"
+                  :href="node.twitter_handle"
                   class="brand-icon text-green-400"
                   ><font-awesome :icon="['fab', 'twitter']"
                 /></a>
@@ -90,16 +90,28 @@ export default {
   },
   computed: {
     data() {
-      return this.$page.metadata.infoData;
+      if (this.$page && this.$page.allPeople && this.$page.allPeople.edges) {
+        return this.$page.allPeople.edges;
+      } else {
+        return {};
+      }
+    },
+  },
+  watch: {
+    data(val) {
+      if (!val) {
+        this.$router.push("/");
+      }
     },
   },
 };
 </script>
 
 <page-query>
-  query getInfoPageData {
-    metadata {
-      infoData {
+query {
+	allPeople {
+    edges {
+      node {
         name
         email
         avatar
@@ -107,9 +119,11 @@ export default {
         github_handle
         linkedin_handle
         twitter_handle
+        username
       }
     }
   }
+}
 </page-query>
 
 <style lang="scss">

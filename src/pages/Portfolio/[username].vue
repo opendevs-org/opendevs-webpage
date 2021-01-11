@@ -113,15 +113,8 @@ export default {
   },
   computed: {
     data() {
-      if (
-        this.username &&
-        this.$page.metadata.infoData &&
-        this.$page.metadata.infoData.length
-      ) {
-        const userData = this.$page.metadata.infoData.filter(
-          (el) => el.username.toLowerCase() === this.username.toLowerCase()
-        );
-        return userData ? userData[0] : {};
+      if (this.$page.person.edges) {
+        return this.$page.person.edges[0].node;
       } else {
         return {};
       }
@@ -134,41 +127,39 @@ export default {
       }
     },
   },
-  async mounted() {
-    const { username } = this.$route.params;
-    this.username = username;
-  },
 };
 </script>
 
 <page-query>
-  query getInfoPageData {
-    metadata {
-      infoData {
+query ($username: String!) {
+	person: allPeople(filter: { username: { eq: $username } }) {
+    edges {
+      node {
         name
-        username
-        intro
-        email
-        avatar
-        quote
-        github_handle
-        linkedin_handle
-        twitter_handle
-        talks {
-          title
-          event
-          isOnline
-          date
-          links {
-            label
-            link
-          }
+      username
+      intro
+      email
+      avatar
+      quote
+      github_handle
+      linkedin_handle
+      twitter_handle
+      talks {
+        title
+        event
+        isOnline
+        date
+        links {
+          label
+          link
         }
-        projects {
-          name
-          featured
-        }
+      }
+      projects {
+        name
+        featured
+      }
       }
     }
   }
+}
 </page-query>

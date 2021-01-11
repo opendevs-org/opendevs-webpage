@@ -1,44 +1,4 @@
 [{
-    "name": "you ?",
-    "username": "bright_star",
-    "email": "",
-    "avatar": "https://tmi.butte.edu/wp-content/uploads/2017/11/blank_profile_questionmark.png",
-    "quote": "quote that defines you?",
-    "github_handle": "",
-    "linkedin_handle": "",
-    "twitter_handle": "",
-    "intro": "",
-    "interview": [],
-    "talks": [],
-    "projects": []
-  },
-  {
-    "name": "alok raj",
-    "username": "alok417",
-    "email": "mailto:alokr417@gmail.com",
-    "avatar": "/alok.jpg",
-    "quote": "keep learning until you achieve, once achieved start again.",
-    "github_handle": "https://github.com/alok722",
-    "linkedin_handle": "https://www.linkedin.com/in/alok722",
-    "twitter_handle": "https://twitter.com/alok722",
-    "intro": "",
-    "interview": [],
-    "talks": [],
-    "projects": [{
-        "name": "dinero.js",
-        "featured": true
-      },
-      {
-        "name": "snippets.js",
-        "featured": false
-      },
-      {
-        "name": "browserstore.js",
-        "featured": false
-      }
-    ]
-  },
-  {
     "name": "mihir kumar",
     "username": "mikr13",
     "email": "mailto:mihirpandey.13@gmail.com",
@@ -192,5 +152,45 @@
         "featured": false
       }
     ]
+  },
+  {
+    "name": "alok raj",
+    "username": "alok417",
+    "email": "mailto:alokr417@gmail.com",
+    "avatar": "/alok.jpg",
+    "quote": "keep learning until you achieve, once achieved start again.",
+    "github_handle": "https://github.com/alok722",
+    "linkedin_handle": "https://www.linkedin.com/in/alok722",
+    "twitter_handle": "https://twitter.com/alok722",
+    "intro": "",
+    "interview": [],
+    "talks": [],
+    "projects": [{
+        "name": "dinero.js",
+        "featured": true
+      },
+      {
+        "name": "snippets.js",
+        "featured": false
+      },
+      {
+        "name": "browserstore.js",
+        "featured": false
+      }
+    ]
+  },
+  {
+    "name": "you ?",
+    "username": "bright_star",
+    "email": "",
+    "avatar": "https://tmi.butte.edu/wp-content/uploads/2017/11/blank_profile_questionmark.png",
+    "quote": "quote that defines you?",
+    "github_handle": "",
+    "linkedin_handle": "",
+    "twitter_handle": "",
+    "intro": "",
+    "interview": [],
+    "talks": [],
+    "projects": []
   }
 ]

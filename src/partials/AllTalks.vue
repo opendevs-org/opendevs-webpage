@@ -14,10 +14,9 @@
 </template>
 
 <script>
+import TalkCard from "../components/TalkCard";
 
-import TalkCard from '../components/TalkCard';
-
-import GenericList from '../components/GenericList';
+import GenericList from "../components/GenericList";
 
 export default {
   components: { TalkCard, GenericList },
@@ -29,7 +28,7 @@ export default {
   },
   data() {
     return {
-      scrollPosition: parseInt(window.scrollY),
+      scrollPosition: 0,
       ticking: false,
       shouldParallax: false,
     };
@@ -39,17 +38,18 @@ export default {
       return 0.05 * this.scrollPosition;
     },
   },
-  created() {
-    window.addEventListener('scroll', this.onScroll);
+  mounted() {
+    this.scrollPosition = parseInt(window.scrollY);
+    window.addEventListener("scroll", this.onScroll);
 
-    window.addEventListener('resize', () => {
+    window.addEventListener("resize", () => {
       const isMediumScreen = window.innerWidth <= 600;
       this.shouldParallax = !isMediumScreen;
     });
   },
   beforeDestroy() {
-    window.removeEventListener('scroll', this.onScroll);
-    window.removeEventListener('resize', this.onScroll);
+    window.removeEventListener("scroll", this.onScroll);
+    window.removeEventListener("resize", this.onScroll);
   },
   methods: {
     onScroll() {

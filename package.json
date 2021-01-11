@@ -18,9 +18,12 @@
   "dependencies": {
     "@gridsome/source-filesystem": "^0.6.2",
     "@gridsome/transformer-remark": "^0.6.3",
-    "autoprefixer": "^10.1.0",
+    "@tailwindcss/postcss7-compat": "^2.0.2",
+    "autoprefixer": "^9",
     "bowser": "^2.11.0",
-    "gridsome": "^0.7.21"
+    "gridsome": "^0.7.21",
+    "postcss": "^7",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
@@ -40,14 +43,9 @@
     "gridsome-plugin-tailwindcss": "^4.1.1",
     "hex-to-rgb": "1.0.1",
     "node-sass": "^5.0.0",
-    "postcss": "^8.1.9",
-    "postcss-import": "12.0.1",
-    "postcss-preset-env": "^6.7.0",
-    "sass-loader": "^10.1.0",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.2",
-    "vue-observe-visibility": "^0.4.6",
-    "vue-resize-directive": "^1.2.0",
-    "vue2-smooth-scroll": "^1.5.0"
+    "postcss-import": "10.0.0",
+    "postcss-preset-env": "6.7.0",
+    "sass-loader": "^10.1.0"
   },
   "keywords": [
     "gridsome",

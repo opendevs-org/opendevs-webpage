@@ -1,5 +1,5 @@
 <template>
-  <article itemscope itemtype="http://schema.org/CreativeWork">
+  <article v-if="interview" itemscope itemtype="http://schema.org/CreativeWork">
     <a
       class="flex md:items-center md:group-hover:opacity-50 md:hover:opacity-important transition group-2"
       :href="interview.link"
@@ -42,15 +42,15 @@
 </template>
 
 <script>
-import formattedDate from '../utils/date';
-import mergeArrays from '../utils/mergeArrays';
+import formattedDate from "../utils/date";
+import mergeArrays from "../utils/mergeArrays";
 
 export default {
   props: {
     interview: {
       type: Object,
-      required: true
-    }
+      required: true,
+    },
   },
   methods: {
     formattedDate,
@@ -58,12 +58,12 @@ export default {
       const icons = {
         blog: QuillIcon,
         podcast: VolumeIcon,
-        video: PlayIcon
+        video: PlayIcon,
       };
 
       return icons[slug];
     },
-    merge: mergeArrays
-  }
+    merge: mergeArrays,
+  },
 };
 </script>

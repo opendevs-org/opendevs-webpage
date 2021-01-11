@@ -3,7 +3,7 @@
     <div
       class="flex flex-col justify-between w-full h-full p-40 min-h-inherit bg-dusk md:group-hover:opacity-50 md:hover:scale-11/10x md:hover:opacity-important transition"
     >
-      <header>
+      <header v-if="talk">
         <h4
           class="text-xs font-bold tracking-widest uppercase text-zenith"
           itemprop="name"
@@ -11,7 +11,12 @@
           {{ talk.event }}
         </h4>
         <div class="flex flex-col mt-8">
-          <p v-if="talk.location" itemprop="location" itemscope itemtype="http://schema.org/Place">
+          <p
+            v-if="talk.location"
+            itemprop="location"
+            itemscope
+            itemtype="http://schema.org/Place"
+          >
             <span
               itemprop="address"
               itemscope
@@ -34,7 +39,7 @@
           >
         </div>
       </header>
-      <div class="flex flex-col mt-24">
+      <div v-if="talk" class="flex flex-col mt-24">
         <h3
           class="text-lg font-semibold leading-tight text-zenith"
           itemprop="name"
@@ -67,17 +72,17 @@
 </template>
 
 <script>
-import formattedDate from '../utils/date';
+import formattedDate from "../utils/date";
 
 export default {
   props: {
     talk: {
       type: Object,
-      required: true
-    }
+      required: true,
+    },
   },
   methods: {
-    formattedDate
-  }
+    formattedDate,
+  },
 };
 </script>

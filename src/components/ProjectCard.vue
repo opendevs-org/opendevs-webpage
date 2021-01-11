@@ -4,7 +4,13 @@
     itemscope
     itemtype="http://schema.org/CreativeWork"
   >
-    <a class="block p-40" :href="project.link" target="_blank" rel="noopener">
+    <a
+      class="block p-40"
+      v-if="project && project.link"
+      :href="project.link"
+      target="_blank"
+      rel="noopener"
+    >
       <p class="text-xs font-bold tracking-widest uppercase text-zenith">
         {{ project.language }}
       </p>

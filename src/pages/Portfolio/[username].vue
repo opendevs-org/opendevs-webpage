@@ -131,7 +131,7 @@ export default {
 </script>
 
 <page-query>
-query ($username: String!) {
+query ($username: String) {
 	person: allPeople(filter: { username: { eq: $username } }) {
     edges {
       node {

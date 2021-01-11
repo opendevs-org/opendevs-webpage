@@ -15,7 +15,8 @@
       >
         <div
           v-for="{ node } in data"
-          :key="node.email"
+          :key="node.username"
+          @click="$router.push(`/portfolio/${node.username}`)"
           class="shadow-xl transform transition duration-500 hover:scale-105"
         >
           <div

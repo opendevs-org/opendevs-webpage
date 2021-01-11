@@ -52,15 +52,15 @@ const openGraph = [
 ];
 
 export default function (Vue, { head, isClient }) {
-  if (isClient) {
-    const vueSmoothScroll = require("vue2-smooth-scroll").default;
-    const resize = require("vue-resize-directive");
-    const { ObserveVisibility } = require("vue-observe-visibility");
+  // if (isClient) {
+  //   const vueSmoothScroll = require("vue2-smooth-scroll").default;
+  //   const resize = require("vue-resize-directive");
+  //   const { ObserveVisibility } = require("vue-observe-visibility");
 
-    Vue.use(vueSmoothScroll);
-    Vue.directive("resize", resize);
-    Vue.directive("observe-visibility", ObserveVisibility);
-  }
+  //   Vue.use(vueSmoothScroll);
+  //   Vue.directive("resize", resize);
+  //   Vue.directive("observe-visibility", ObserveVisibility);
+  // }
   Vue.component('font-awesome', FontAwesomeIcon);
   Vue.component('Layout', DefaultLayout);
   head.meta.push(...metadata.concat(openGraph));

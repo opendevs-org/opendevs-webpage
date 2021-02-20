@@ -266,7 +266,7 @@
                   ><font-awesome :icon="['fab', 'dev']"
                 /></a>
                 <a
-                  href="https://medium.com/@opendevs_2020"
+                  href="https://opendevs-2020.medium.com/"
                   target="_blank"
                   class="brand-icon text-green-400"
                   ><font-awesome :icon="['fab', 'medium']"

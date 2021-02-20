@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import BlogList from '~/components/BlogList.vue';
+import BlogList from '~/components/BlogList.vue'
 
 export default {
   metaInfo: {
@@ -14,7 +14,7 @@ export default {
   components: {
     BlogList
   }
-};
+}
 </script>
 
 <page-query>

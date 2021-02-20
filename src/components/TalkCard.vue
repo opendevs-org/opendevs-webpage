@@ -72,7 +72,7 @@
 </template>
 
 <script>
-import formattedDate from "../utils/date";
+import formattedDate from "../utils/date"
 
 export default {
   props: {
@@ -84,5 +84,5 @@ export default {
   methods: {
     formattedDate,
   },
-};
+}
 </script>

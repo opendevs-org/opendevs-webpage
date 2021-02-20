@@ -42,8 +42,8 @@
 </template>
 
 <script>
-import formattedDate from "../utils/date";
-import mergeArrays from "../utils/mergeArrays";
+import formattedDate from "../utils/date"
+import mergeArrays from "../utils/mergeArrays"
 
 export default {
   props: {
@@ -59,11 +59,11 @@ export default {
         blog: QuillIcon,
         podcast: VolumeIcon,
         video: PlayIcon,
-      };
+      }
 
-      return icons[slug];
+      return icons[slug]
     },
     merge: mergeArrays,
   },
-};
+}
 </script>

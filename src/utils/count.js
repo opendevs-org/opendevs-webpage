@@ -1,7 +1,7 @@
 const formattedCount = (count) => {
-  const formatter = new Intl.NumberFormat('en-US');
+  const formatter = new Intl.NumberFormat('en-US')
 
-  return formatter.format(count);
-};
+  return formatter.format(count)
+}
 
-export default formattedCount;
+export default formattedCount

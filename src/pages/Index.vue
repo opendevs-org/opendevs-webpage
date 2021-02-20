@@ -285,7 +285,7 @@ export default {
   metaInfo: {
     title: "Home",
   },
-};
+}
 </script>
 
 <page-query>

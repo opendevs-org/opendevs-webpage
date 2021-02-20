@@ -38,7 +38,7 @@
 </template>
 
 <script>
-import formattedCount from "../utils/count";
+import formattedCount from "../utils/count"
 
 export default {
   props: {
@@ -50,5 +50,5 @@ export default {
   methods: {
     formattedCount,
   },
-};
+}
 </script>

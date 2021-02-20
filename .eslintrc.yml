@@ -4,24 +4,24 @@ env:
   commonjs: true
   es2020: true
 extends:
-  - 'eslint:recommended'
-  - 'plugin:vue/essential'
+  - "eslint:recommended"
+  - "plugin:vue/essential"
 parserOptions:
   ecmaVersion: 11
 rules:
-  vue/experimental-script-setup-vars: 'off'
-  no-useless-catch: 'off'
-  no-undef: 'off'
+  vue/experimental-script-setup-vars: "off"
+  no-useless-catch: "off"
+  no-undef: "off"
   indent:
-    - 'error'
+    - "error"
     - 2
   eqeqeq:
-    - 'error'
-    - 'always'
+    - "error"
+    - "always"
   camelcase:
-    - 'error'
-  linebreak-style: 'off'
-  quotes: 'off'
+    - "error"
+  linebreak-style: "off"
+  quotes: "off"
   semi:
     - error
-    - always
+    - never

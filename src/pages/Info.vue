@@ -87,25 +87,25 @@ export default {
       bodyAttrs: {
         style: `background-color: ${this.data.background_color}; color: ${this.data.text_color}`,
       },
-    };
+    }
   },
   computed: {
     data() {
       if (this.$page && this.$page.allPeople && this.$page.allPeople.edges) {
-        return this.$page.allPeople.edges;
+        return this.$page.allPeople.edges
       } else {
-        return {};
+        return {}
       }
     },
   },
   watch: {
     data(val) {
       if (!val) {
-        this.$router.push("/");
+        this.$router.push("/")
       }
     },
   },
-};
+}
 </script>
 
 <page-query>

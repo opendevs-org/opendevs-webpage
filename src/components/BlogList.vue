@@ -34,16 +34,16 @@ export default {
   },
   methods: {
     formatDate(date) {
-      return new Date(date).toDateString().slice(4);
+      return new Date(date).toDateString().slice(4)
     },
     formatExcerpt(excerpt) {
-      const blurb = excerpt.slice(3, 200).trim();
+      const blurb = excerpt.slice(3, 200).trim()
       return blurb.indexOf("</p>") !== -1
         ? blurb.slice(0, blurb.indexOf("</p>")).trim() + "..."
-        : blurb + "...";
+        : blurb + "..."
     },
   },
-};
+}
 </script>
 
 <style scoped lang="scss">

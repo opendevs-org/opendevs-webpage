@@ -14,9 +14,9 @@
 </template>
 
 <script>
-import TalkCard from "../components/TalkCard";
+import TalkCard from "../components/TalkCard"
 
-import GenericList from "../components/GenericList";
+import GenericList from "../components/GenericList"
 
 export default {
   components: { TalkCard, GenericList },
@@ -31,37 +31,37 @@ export default {
       scrollPosition: 0,
       ticking: false,
       shouldParallax: false,
-    };
+    }
   },
   computed: {
     scroll() {
-      return 0.05 * this.scrollPosition;
+      return 0.05 * this.scrollPosition
     },
   },
   mounted() {
-    this.scrollPosition = parseInt(window.scrollY);
-    window.addEventListener("scroll", this.onScroll);
+    this.scrollPosition = parseInt(window.scrollY)
+    window.addEventListener("scroll", this.onScroll)
 
     window.addEventListener("resize", () => {
-      const isMediumScreen = window.innerWidth <= 600;
-      this.shouldParallax = !isMediumScreen;
-    });
+      const isMediumScreen = window.innerWidth <= 600
+      this.shouldParallax = !isMediumScreen
+    })
   },
   beforeDestroy() {
-    window.removeEventListener("scroll", this.onScroll);
-    window.removeEventListener("resize", this.onScroll);
+    window.removeEventListener("scroll", this.onScroll)
+    window.removeEventListener("resize", this.onScroll)
   },
   methods: {
     onScroll() {
       if (!this.ticking) {
         window.requestAnimationFrame(() => {
-          this.scrollPosition = parseInt(window.scrollY);
-          this.ticking = false;
-        });
+          this.scrollPosition = parseInt(window.scrollY)
+          this.ticking = false
+        })
 
-        this.ticking = true;
+        this.ticking = true
       }
     },
   },
-};
+}
 </script>

@@ -35,22 +35,22 @@ export default {
   metaInfo() {
     return {
       title: this.$page.post.title,
-    };
+    }
   },
   computed: {
     nextBlogPath() {
-      const allBlogs = this.$page.all.edges;
-      const firstBlogPath = allBlogs[0].node.path;
+      const allBlogs = this.$page.all.edges
+      const firstBlogPath = allBlogs[0].node.path
       const currentBlog = allBlogs.filter(
         (node) => node.node.title === this.$page.post.title
-      );
-      const isNull = (item) => item === null || item === undefined;
+      )
+      const isNull = (item) => item === null || item === undefined
       return isNull(currentBlog[0].next)
         ? firstBlogPath
-        : currentBlog[0].next.path;
+        : currentBlog[0].next.path
     },
   },
-};
+}
 </script>
 
 <page-query>

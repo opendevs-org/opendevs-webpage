@@ -9,8 +9,8 @@
 </template>
 
 <script>
-import GenericList from "@/components/GenericList";
-import ProjectCard from "@/components/ProjectCard";
+import GenericList from "@/components/GenericList"
+import ProjectCard from "@/components/ProjectCard"
 
 export default {
   components: { GenericList, ProjectCard },
@@ -20,5 +20,5 @@ export default {
       required: true,
     },
   },
-};
+}
 </script>

@@ -37,7 +37,7 @@
 </template>
 
 <script>
-import Bowser from 'bowser';
+import Bowser from 'bowser'
 
 export default {
   props: {
@@ -55,33 +55,33 @@ export default {
   computed: {
 
     activeColor() {
-      return this.isDark;
+      return this.isDark
     },
 
     routerLink () {
-      return this.$route.path;
+      return this.$route.path
     },
 
     pageName () {
-      return this.$route.name;
+      return this.$route.name
     }
   },
 
   mounted() {
-    this.isDark = document.documentElement.classList.contains('dark-mode');
-    this.browserName = Bowser.getParser(window.navigator.userAgent).parsedResult.browser.name;
+    this.isDark = document.documentElement.classList.contains('dark-mode')
+    this.browserName = Bowser.getParser(window.navigator.userAgent).parsedResult.browser.name
   },
 
   methods: {
     toggleDarkMode() {
-      document.documentElement.classList.toggle('dark-mode');
-      this.isDark = document.documentElement.classList.contains('dark-mode');
+      document.documentElement.classList.toggle('dark-mode')
+      this.isDark = document.documentElement.classList.contains('dark-mode')
     },
 
-    hasHistory () { return window.history.length > 2; }
+    hasHistory () { return window.history.length > 2 }
 
   }
-};
+}
 </script>
 
 <static-query>

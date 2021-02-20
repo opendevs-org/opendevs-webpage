@@ -15,9 +15,9 @@ export default {
   metaInfo() {
     return {
       title: 'Not Found',
-    };
+    }
   }
-};
+}
 </script>
 
 <style lang="scss" scoped>

@@ -1,3 +1,3 @@
-const mergeArrays = (...arrs) => arrs.reduce((acc, curr) => acc.concat(...curr), []);
+const mergeArrays = (...arrs) => arrs.reduce((acc, curr) => acc.concat(...curr), [])
 
-export default mergeArrays;
+export default mergeArrays

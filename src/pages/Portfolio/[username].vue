@@ -90,8 +90,8 @@
 </template>
 
 <script>
-import AllProjects from "../../partials/AllProjects";
-import AllTalks from "../../partials/AllTalks";
+import AllProjects from "../../partials/AllProjects"
+import AllTalks from "../../partials/AllTalks"
 export default {
   metaInfo: {
     bodyAttrs: {
@@ -109,25 +109,25 @@ export default {
         { label: "Projects", link: "#projects" },
         { label: "Talks", link: "#talks" },
       ],
-    };
+    }
   },
   computed: {
     data() {
       if (this.$page.person.edges) {
-        return this.$page.person.edges[0].node;
+        return this.$page.person.edges[0].node
       } else {
-        return {};
+        return {}
       }
     },
   },
   watch: {
     data(val) {
       if (!val) {
-        this.$router.push("/");
+        this.$router.push("/")
       }
     },
   },
-};
+}
 </script>
 
 <page-query>

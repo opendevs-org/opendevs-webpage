@@ -24,10 +24,6 @@ jobs:
       - name: Project build
         run: yarn run build
 
-      - name: Install rsync 📚
-        run: |
-          sudo apt-get update && apt-get install -y rsync
-
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:

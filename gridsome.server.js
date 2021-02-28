@@ -11,8 +11,8 @@ module.exports = (api) => {
       collection.addNode({ ...item })
       api.createPages(({ createPage }) => {
         createPage({
-          path: `/portfolio/${ item.username }`,
-          component: resolve('./src/pages/portfolio/[username].vue'),
+          path: `/me/${ item.username }`,
+          component: resolve('./src/pages/me/[username].vue'),
           context: {
             username: item.username
           }

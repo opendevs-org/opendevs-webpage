@@ -6,7 +6,8 @@ function validateEmail(email) {
 }
 
 function validateMobile(mobile) {
-  if (mobile.length === 0) return true;
+  var reg = /^[6-9]\d{9}$/
+  if (mobile.length === 0 && reg.test(mobile)) return true;
   if (mobile.length !== 10 || isNaN(mobile)) return false;
   return true;
 }

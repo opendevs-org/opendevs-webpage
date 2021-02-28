@@ -1,5 +1,5 @@
 <template>
-  <Layout page="info">
+  <Layout page="people">
     <div class="container relative mx-auto">
       <div class="items-center flex flex-wrap">
         <div class="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
@@ -9,7 +9,7 @@
         </div>
       </div>
     </div>
-    <div class="p-8 flex items-center justify-center info-card-section">
+    <div class="p-8 flex items-center justify-center people-card-section">
       <div
         class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-3 gap-6"
       >
@@ -83,7 +83,7 @@
 export default {
   metaInfo() {
     return {
-      title: "Info",
+      title: "People",
       bodyAttrs: {
         style: `background-color: ${this.data.background_color}; color: ${this.data.text_color}`,
       },
@@ -128,22 +128,7 @@ query {
 </page-query>
 
 <style lang="scss">
-.info__blurb {
-  padding: 1.5rem 1.25rem;
-  p {
-    font-size: 1.4rem;
-  }
-
-  div {
-    margin-bottom: 20px;
-  }
-
-  .contributor {
-    font-size: medium;
-  }
-}
-
-.info-card-section {
+.people-card-section {
   background-color: #e2e8f0;
   min-height: calc(100vh - 153.31px);
 

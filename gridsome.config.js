@@ -1,5 +1,5 @@
 const config = require('./src/assets/content/data/config.json')
-const infoData = require('./src/assets/content/data/info.json')
+const peopleData = require('./src/assets/content/data/info.json')
 
 module.exports = {
   siteName: config.title,
@@ -11,7 +11,7 @@ module.exports = {
   metadata: {
     siteName: config.title,
     siteDescription: config.description,
-    infoData: infoData,
+    peopleData,
   },
   plugins: [
     {

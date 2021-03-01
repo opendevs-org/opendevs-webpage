@@ -7,18 +7,19 @@
   "scripts": {
     "build": "gridsome build",
     "dev": "gridsome develop",
+    "clean": "rimraf .cache && rimraf dist && rimraf src/.temp",
     "explore": "gridsome explore",
     "od": "gridsome develop -p 8080 --host 0.0.0.0",
-    "commit-a": "git add . && git cz",
-    "commit": "git cz",
+    "commit-a": "yarn lint && git add . && git cz",
+    "commit": "yarn lint && git cz",
     "lint": "vue-cli-service lint",
-    "predeploy": "npm run build",
+    "predeploy": "npm run clean && npm run build",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@gridsome/source-filesystem": "^0.6.2",
     "@gridsome/transformer-remark": "^0.6.4",
-    "@tailwindcss/postcss7-compat": "^2.0.3",
+    "@tailwindcss/postcss7-compat": "npm:@tailwindcss/postcss7-compat",
     "autoprefixer": "^9",
     "bowser": "^2.11.0",
     "gridsome": "^0.7.23",
@@ -45,6 +46,7 @@
     "node-sass": "^5.0.0",
     "postcss-import": "10.0.0",
     "postcss-preset-env": "6.7.0",
+    "rimraf": "3.0.2",
     "sass-loader": "^10.1.0"
   },
   "keywords": [

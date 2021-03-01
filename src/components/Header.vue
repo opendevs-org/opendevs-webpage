@@ -27,8 +27,8 @@
 
       <div>
         <h2>
-          <g-link :to="'/info'">
-            info
+          <g-link :to="'/people'">
+            people
           </g-link>
         </h2>
       </div>

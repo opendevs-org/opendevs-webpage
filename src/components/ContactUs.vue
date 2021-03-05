@@ -8,7 +8,7 @@
         <label
           class="block uppercase tracking-wide text-yellow-700 text-xs font-bold mb-2"
         >
-          Name <sup>{{ " " }}*</sup>
+          name <sup>{{ " " }}*</sup>
         </label>
         <input
           class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
@@ -27,7 +27,7 @@
         <label
           class="block uppercase tracking-wide text-yellow-700 text-xs font-bold mb-2"
         >
-          Mobile
+          mobile
         </label>
         <input
           class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
@@ -48,7 +48,7 @@
         <label
           class="block uppercase tracking-wide text-yellow-700 text-xs font-bold mb-2"
         >
-          E-mail<sup>{{ " " }}*</sup>
+          e-mail<sup>{{ " " }}*</sup>
         </label>
         <input
           class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
@@ -69,7 +69,7 @@
         <label
           class="block uppercase tracking-wide text-yellow-700 text-xs font-bold mb-2"
         >
-          Subject<sup>{{ " " }}*</sup>
+          subject<sup>{{ " " }}*</sup>
         </label>
         <input
           class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
@@ -88,7 +88,7 @@
         <label
           class="block uppercase tracking-wide text-yellow-700 text-xs font-bold mb-2"
         >
-          Description
+          description
         </label>
         <textarea
           class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:border-gray-500 h-48 resize-none"
@@ -109,7 +109,7 @@
         type="button"
         @click="submit"
       >
-        Send
+        send
       </button>
     </div>
   </form>

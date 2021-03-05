@@ -118,24 +118,25 @@
 <script>
 import * as InputValidations from "../utils/InputValidations";
 import emailjs from "emailjs-com";
-import{ init } from 'emailjs-com';
+import { init } from "emailjs-com";
 init("user_TGyjnXnxapi7xn7FPpyTE");
 export default {
   name: "ContactUs",
-  data: function() {
+  data: function () {
+    const userdata = JSON.parse(localStorage.getItem("userdata"))
     return {
-      username: "",
-      email: "",
+      username: userdata?.username || "",
+      email: userdata?.email || "",
       subject: "",
       text: "",
-      mobile: "",
+      mobile: userdata?.mobile || "",
       description: "",
       usernameerr: false,
       emailerr: false,
       subjecterr: false,
       texterr: false,
       mobileerr: false,
-      descriptionerr: false
+      descriptionerr: false,
     };
   },
   methods: {
@@ -145,7 +146,7 @@ export default {
         validateMobile,
         validateName,
         validateDescription,
-        validateSubject
+        validateSubject,
       } = InputValidations;
       if (
         validateEmail(this.email) &&
@@ -154,30 +155,60 @@ export default {
         validateDescription(this.description) &&
         validateSubject(this.subject)
       ) {
+        // var data = {
+
+        //     username: this.username,
+        //     email: this.email,
+        //     mobile: this.mobile || "Not provided",
+        //     subject: this.subject,
+        //     description: this.description || "Not provided"
+
+        // };
+        // const TEMPLATE_ID = "template_xgwzxjg"
+        // const SERVICE_ID = "service_y6z2vei"
+        // emailjs                                                                         ////EMAIL JS CODE
+        //   .send(SERVICE_ID, TEMPLATE_ID, data)
+        //   .then(
+        //     function(response) {
+        //       console.log("SUCCESS!", response.status, response.text);
+        //     },
+        //     function(error) {
+        //       console.log("FAILED...", error);
+        //     }
+        //   );
+        //   ////////////////////////////////
+
         var data = {
-
-            username: this.username,
-            email: this.email,
-            mobile: this.mobile || "Not provided",
-            subject: this.subject,
-            description: this.description || "Not provided"
-          
+          Name: this.username,
+          Email: this.email,
+          Mobile: this.mobile || "Not provided",
+          Subject: this.subject,
+          Description: this.description || "Not provided",
         };
-        //////////////////////////////////////Todo email
-        const TEMPLATE_ID = "template_xgwzxjg"
-        emailjs
-          .send("service_y6z2vei", TEMPLATE_ID, data)
-          .then(
-            function(response) {
-              console.log("SUCCESS!", response.status, response.text);
+
+        fetch(
+          "https://sheet.best/api/sheets/3cd750cf-72c4-4cfd-bfd6-82f106c577df",
+          {
+            method: "POST",
+            mode: "cors",
+            headers: {
+              "Content-Type": "application/json",
             },
-            function(error) {
-              console.log("FAILED...", error);
-            }
-          );
+            body: JSON.stringify(data),                                                    /////Google Sheet Code
+          }
+        )
+          .then((response) => response.json())
+          .then((data) => {
+            console.log(data);
+          })
+          .catch((err) => {
+            console.log("Error " + err);
+          });
 
-
-      } else {
+      } 
+      
+      
+      else {
         console.log("failed");
         this.usernameerr = InputValidations.validateName(this.username)
           ? false
@@ -197,6 +228,7 @@ export default {
           ? false
           : true;
       }
+      localStorage.setItem("userdata" , JSON.stringify({username:this.username , email:this.email , mobile:this.mobile}))
 
       this.subject = "";
       this.description = "";
@@ -225,9 +257,13 @@ export default {
         )
           ? false
           : true;
-    }
-  }
+    },
+  },
 };
+
+// client id 381715156105-njr2md9g7sp45586mh4n36o21212c8cv.apps.googleusercontent.com
+
+// cliemt secret Op6X3JT_f3pWntlZGmAR_OyK
 </script>
 
 <style scoped></style>

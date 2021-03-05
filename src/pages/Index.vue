@@ -248,42 +248,18 @@
             </div>
           </div>
         </section>
-        <section class="pb-20 pt-48 relative block bg-gray-900 mt-24">
-          <div class="container mx-auto px-4 lg:pt-24 lg:pb-64">
-            <div class="flex flex-wrap text-center justify-center">
-              <div class="w-full lg:w-6/12 px-4">
-                <h2 class="text-4xl font-semibold text-white">
-                  build something
-                </h2>
-                <p class="text-lg leading-relaxed mt-4 mb-4 text-gray-500">
-                  connect with us at:
-                </p>
-                <a
-                  href="mailto:open.devs.github@gmail.com"
-                  target="_blank"
-                  class="brand-icon text-green-400"
-                  ><font-awesome :icon="['fas', 'envelope']"
-                /></a>
-                <a
-                  href="https://github.com/open-devs"
-                  target="_blank"
-                  class="brand-icon text-green-400"
-                  ><font-awesome :icon="['fab', 'github']"
-                /></a>
-                <a
-                  href="https://dev.to/opendevs_2020"
-                  target="_blank"
-                  class="brand-icon text-green-400"
-                  ><font-awesome :icon="['fab', 'dev']"
-                /></a>
-                <a
-                  href="https://opendevs-2020.medium.com/"
-                  target="_blank"
-                  class="brand-icon text-green-400"
-                  ><font-awesome :icon="['fab', 'medium']"
-                /></a>
-              </div>
-            </div>
+
+        <section class="pb-20 pt-48 relative block bg-gray-900 mt-24 my-style">
+          <div class="box">
+                <div class ="one" >
+                  <FollowUs />
+                </div>
+                <div class="two">
+                  <VerticalBar />
+                </div>
+                <div class="three">
+                  <ContactUs />
+                </div>
           </div>
         </section>
       </main>
@@ -292,13 +268,36 @@
 </template>
 
 <script>
+import ContactUs from "../components/ContactUs.vue";
+import FollowUs from "../components/FollowUs.vue";
+import VerticalBar from "../components/VerticalBar.vue";
+
 export default {
+  components: { ContactUs, FollowUs, VerticalBar },
   metaInfo: {
-    title: "Home",
-  },
-}
+    title: "Home"
+  }
+};
 </script>
 
+<style scoped>
+      .box {
+        display: flex;
+      }
+
+      .one {
+        flex: 2 1 auto;
+      }
+
+      .two {
+        flex: 1 1 auto;
+      }
+
+      .three {
+        flex: 1 1 auto;
+      }
+  
+</style>
 <page-query>
   query getConfigData {
     metadata {

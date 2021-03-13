@@ -268,16 +268,16 @@
 </template>
 
 <script>
-import ContactUs from "../components/ContactUs.vue";
-import FollowUs from "../components/FollowUs.vue";
-import VerticalBar from "../components/VerticalBar.vue";
+import ContactUs from "../components/ContactUs.vue"
+import FollowUs from "../components/FollowUs.vue"
+import VerticalBar from "../components/VerticalBar.vue"
 
 export default {
   components: { ContactUs, FollowUs, VerticalBar },
   metaInfo: {
     title: "Home"
   }
-};
+}
 </script>
 
 <style scoped>

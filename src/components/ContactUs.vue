@@ -116,10 +116,9 @@
 </template>
 
 <script>
-import * as InputValidations from "../utils/InputValidations";
-import emailjs from "emailjs-com";
-import { init } from "emailjs-com";
-init("user_TGyjnXnxapi7xn7FPpyTE");
+import * as InputValidations from "../utils/InputValidations"
+import { init } from "emailjs-com"
+init("user_TGyjnXnxapi7xn7FPpyTE")
 export default {
   name: "ContactUs",
   data: function () {
@@ -137,17 +136,17 @@ export default {
       texterr: false,
       mobileerr: false,
       descriptionerr: false,
-    };
+    }
   },
   methods: {
-    submit(event) {
+    submit() {
       const {
         validateEmail,
         validateMobile,
         validateName,
         validateDescription,
         validateSubject,
-      } = InputValidations;
+      } = InputValidations
       if (
         validateEmail(this.email) &&
         validateMobile(this.mobile) &&
@@ -155,7 +154,7 @@ export default {
         validateDescription(this.description) &&
         validateSubject(this.subject)
       ) {
-        // var data = {
+        // const data = {
 
         //     username: this.username,
         //     email: this.email,
@@ -170,24 +169,24 @@ export default {
         //   .send(SERVICE_ID, TEMPLATE_ID, data)
         //   .then(
         //     function(response) {
-        //       console.log("SUCCESS!", response.status, response.text);
+        //      
         //     },
         //     function(error) {
-        //       console.log("FAILED...", error);
+        //       
         //     }
         //   );
         //   ////////////////////////////////
 
-        var data = {
+        const data = {
           Name: this.username,
           Email: this.email,
           Mobile: this.mobile || "Not provided",
           Subject: this.subject,
           Description: this.description || "Not provided",
-        };
+        }
 
         fetch(
-          "https://sheet.best/api/sheets/3cd750cf-72c4-4cfd-bfd6-82f106c577df",
+          "https://sheet.best/api/sheets/3cd750cf-72c4-4cfd-bfd6-82f106c577df",           ///change url
           {
             method: "POST",
             mode: "cors",
@@ -199,67 +198,68 @@ export default {
         )
           .then((response) => response.json())
           .then((data) => {
-            console.log(data);
+          //show succes msg
+            console.log(data)
           })
           .catch((err) => {
-            console.log("Error " + err);
-          });
+            //show error
+            console.log(err)
+          })
 
       } 
       
       
       else {
-        console.log("failed");
+   
         this.usernameerr = InputValidations.validateName(this.username)
           ? false
-          : true;
+          : true
         this.usernameerr = InputValidations.validateName(this.username)
           ? false
-          : true;
+          : true
         this.mobileerr = InputValidations.validateMobile(this.mobile)
           ? false
-          : true;
+          : true
         this.subjecterr = InputValidations.validateSubject(this.subject)
           ? false
-          : true;
+          : true
         this.descriptionerr = InputValidations.validateDescription(
           this.description
         )
           ? false
-          : true;
+          : true
       }
       localStorage.setItem("userdata" , JSON.stringify({username:this.username , email:this.email , mobile:this.mobile}))
 
-      this.subject = "";
-      this.description = "";
+      this.subject = ""
+      this.description = ""
     },
     changeHandler(event) {
-      //   console.log(event.target.name , event.target.value);
       if (event.target.name === "username")
         this.usernameerr = InputValidations.validateName(this.username)
           ? false
-          : true;
+          : true
       else if (event.target.name === "email")
         this.usernameerr = InputValidations.validateName(this.username)
           ? false
-          : true;
+          : true
       else if (event.target.name === "mobile")
         this.mobileerr = InputValidations.validateMobile(this.mobile)
           ? false
-          : true;
+          : true
       else if (event.target.name === "subject")
         this.subjecterr = InputValidations.validateSubject(this.subject)
           ? false
-          : true;
+          : true
       else if (event.target.name === "description")
         this.descriptionerr = InputValidations.validateDescription(
           this.description
         )
           ? false
-          : true;
+          : true
     },
   },
-};
+}
 
 // client id 381715156105-njr2md9g7sp45586mh4n36o21212c8cv.apps.googleusercontent.com
 

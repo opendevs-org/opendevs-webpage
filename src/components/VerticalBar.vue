@@ -10,7 +10,7 @@ OR
 <script>
 export default {
   name: "VerticalBar"
-};
+}
 </script>
 
 <style scoped>

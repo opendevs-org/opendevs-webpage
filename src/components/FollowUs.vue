@@ -37,7 +37,7 @@
 
 <script>
 export default {
-      name: 'FollowUs'
+  name: 'FollowUs'
 }
 </script>
 

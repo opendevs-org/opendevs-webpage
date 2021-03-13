@@ -1,38 +1,16 @@
-function validateEmail(email) {
-  var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,10})$/;
 
-  if (reg.test(email) == false) return false;
-  return true;
-}
+const validateEmail = email => (/^([A-Za-z0-9_\-.])+@([A-Za-z0-9_\-.])+.([A-Za-z]{2,10})$/).test(email)
 
-function validateMobile(mobile) {
-  var reg = /^[6-9]\d{9}$/
-  if (mobile.length === 0 && reg.test(mobile)) return true;
-  if (mobile.length !== 10 || isNaN(mobile)) return false;
-  return true;
-}
 
-function validateName(name) {
-  if (!name || name.length < 3 || name.length > 20) return false;
-  return true;
-}
+const validateMobile = mobile =>  (/^[6-9]\d{9}$/).test(mobile)
 
-function validateSubject(subject) {
-  if (!subject || subject.length < 7 || subject.length > 200) return false;
-  return true;
-}
 
-function validateDescription(Description) {
-  if (Description.length === 0) return true;
-  if (
-    !Description ||
-    Description.split(" ").length < 10 ||
-    Description.split(" ").length > 1024
-  )
-    return false;
+const validateName = name => !(!name || name.length < 3 || name.length > 20)
 
-  return true;
-}
+const validateSubject = subject => !(!subject || subject.length < 7 || subject.length > 200)
+
+
+const validateDescription = description => !(!description || description.split(" ").length < 10 ||  description.split(" ").length > 1024)
 
 module.exports = {
   validateEmail,
@@ -40,4 +18,4 @@ module.exports = {
   validateName,
   validateDescription,
   validateSubject
-};
+}

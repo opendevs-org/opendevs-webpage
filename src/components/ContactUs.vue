@@ -1,6 +1,6 @@
 <template>
   <form class="w-full max-w-lg contact-form">
-    <h2 class="text-4xl font-semibold text-white text-center">
+    <h2 class="text-4xl font-semibold text-white text-center contactform_heading">
       want to say something
     </h2>
     <div class="flex flex-wrap -mx-3 mb-6">
@@ -111,6 +111,7 @@
       >
         send
       </button>
+      <SnackBar :display="display" :success="success" :close="closeSnackBar" />
     </div>
   </form>
 </template>
@@ -119,11 +120,13 @@
 import * as InputValidations from "../utils/InputValidations";
 import emailjs from "emailjs-com";
 import { init } from "emailjs-com";
-init("user_TGyjnXnxapi7xn7FPpyTE");
+import SnackBar from "./SnackBar.vue";
+init(process.env.GRIDSOME_EMAILJS_USER_ID); //// Opendevs user ID from EmailJS
 export default {
   name: "ContactUs",
-  data: function () {
-    const userdata = JSON.parse(localStorage.getItem("userdata"))
+  components: { SnackBar },
+  data: function() {
+    const userdata = JSON.parse(localStorage.getItem("userdata"));
     return {
       username: userdata?.username || "",
       email: userdata?.email || "",
@@ -137,16 +140,19 @@ export default {
       texterr: false,
       mobileerr: false,
       descriptionerr: false,
+      success: false,
+      display: false
     };
   },
   methods: {
     submit(event) {
+      let valid = false;
       const {
         validateEmail,
         validateMobile,
         validateName,
         validateDescription,
-        validateSubject,
+        validateSubject
       } = InputValidations;
       if (
         validateEmail(this.email) &&
@@ -155,60 +161,54 @@ export default {
         validateDescription(this.description) &&
         validateSubject(this.subject)
       ) {
-        // var data = {
+        const emailData = {
+          username: this.username,
+          email: this.email,
+          mobile: this.mobile || "Not provided",
+          subject: this.subject,
+          description: this.description || "Not provided"
+        };
+        const TEMPLATE_ID = process.env.GRIDSOME_EMAILJS_TEMPLATE_ID;
+        const SERVICE_ID = process.env.GRIDSOME_EMAILJS_SERVICE_ID;
+        emailjs ////EMAIL JS CODE
+          .send(SERVICE_ID, TEMPLATE_ID, emailData)
+          .then(
+            function(response) {
+              valid = true;
+            },
+            function(error) {
+              valid = false;
+            }
+          );
+        ////////////////////////////////
 
-        //     username: this.username,
-        //     email: this.email,
-        //     mobile: this.mobile || "Not provided",
-        //     subject: this.subject,
-        //     description: this.description || "Not provided"
-
-        // };
-        // const TEMPLATE_ID = "template_xgwzxjg"
-        // const SERVICE_ID = "service_y6z2vei"
-        // emailjs                                                                         ////EMAIL JS CODE
-        //   .send(SERVICE_ID, TEMPLATE_ID, data)
-        //   .then(
-        //     function(response) {
-        //       console.log("SUCCESS!", response.status, response.text);
-        //     },
-        //     function(error) {
-        //       console.log("FAILED...", error);
-        //     }
-        //   );
-        //   ////////////////////////////////
-
-        var data = {
+        var sheetsData = {
           Name: this.username,
           Email: this.email,
           Mobile: this.mobile || "Not provided",
           Subject: this.subject,
-          Description: this.description || "Not provided",
+          Description: this.description || "Not provided"
         };
 
         fetch(
-          "https://sheet.best/api/sheets/3cd750cf-72c4-4cfd-bfd6-82f106c577df",
+          process.env.GRIDSOME_SHEET_BEST_URL,
           {
             method: "POST",
             mode: "cors",
             headers: {
-              "Content-Type": "application/json",
+              "Content-Type": "application/json"
             },
-            body: JSON.stringify(data),                                                    /////Google Sheet Code
+            body: JSON.stringify(sheetsData) /////Google Sheet Code
           }
         )
-          .then((response) => response.json())
-          .then((data) => {
-            console.log(data);
+          .then(response => response.json())
+          .then(data => {
+            valid = true;
           })
-          .catch((err) => {
-            console.log("Error " + err);
+          .catch(err => {
+            valid = false;
           });
-
-      } 
-      
-      
-      else {
+      } else {
         console.log("failed");
         this.usernameerr = InputValidations.validateName(this.username)
           ? false
@@ -228,10 +228,30 @@ export default {
           ? false
           : true;
       }
-      localStorage.setItem("userdata" , JSON.stringify({username:this.username , email:this.email , mobile:this.mobile}))
-
+      localStorage.setItem(
+        "userdata",
+        JSON.stringify({
+          username: this.username,
+          email: this.email,
+          mobile: this.mobile
+        })
+      );
+      if (valid) {
+        this.display = true;
+        this.success = true;
+      } else {
+        this.display = true;
+        this.success = false;
+      }
+      setTimeout(() => {
+        this.display = false;
+      }, 4000);
       this.subject = "";
       this.description = "";
+    },
+    closeSnackBar() {
+      this.display = false;
+      this.success = false;
     },
     changeHandler(event) {
       //   console.log(event.target.name , event.target.value);
@@ -257,13 +277,13 @@ export default {
         )
           ? false
           : true;
-    },
-  },
+    }
+  }
 };
-
-// client id 381715156105-njr2md9g7sp45586mh4n36o21212c8cv.apps.googleusercontent.com
-
-// cliemt secret Op6X3JT_f3pWntlZGmAR_OyK
 </script>
 
-<style scoped></style>
+<style scoped>
+.contactform_heading{
+  margin-bottom: 5%;
+}
+</style>

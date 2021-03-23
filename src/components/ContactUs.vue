@@ -254,7 +254,7 @@ export default {
       this.success = false;
     },
     changeHandler(event) {
-      //   console.log(event.target.name , event.target.value);
+   
       if (event.target.name === "username")
         this.usernameerr = InputValidations.validateName(this.username)
           ? false

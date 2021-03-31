@@ -128,27 +128,24 @@ init(process.env.GRIDSOME_EMAILJS_USER_ID)
 export default {
   name: "ContactUs",
   components: { SnackBar },
-  data: function() {
-    const userdata = JSON.parse(localStorage.getItem("userdata"))
-    return {
-      username: userdata?.username || "",
-      email: userdata?.email || "",
-      subject: "",
-      text: "",
-      statusColor: "",
-      message: "",
-      mobile: userdata?.mobile || "",
-      description: "",
-      usernameErr: false,
-      emailErr: false,
-      subjectErr: false,
-      texterr: false,
-      mobileErr: false,
-      descriptionErr: false,
-      success: false,
-      display: false
-    }
-  },
+  data: () => ({
+    username: "",
+    email: "",
+    subject: "",
+    text: "",
+    statusColor: "",
+    message: "",
+    mobile: "",
+    description: "",
+    usernameErr: false,
+    emailErr: false,
+    subjectErr: false,
+    texterr: false,
+    mobileErr: false,
+    descriptionErr: false,
+    success: false,
+    display: false
+  }),
   methods: {
     submit() {
       const {

@@ -8,7 +8,7 @@
     <div class="flex flex-wrap -mx-3 mb-6">
       <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
         <label
-          class="block uppercase tracking-wide text-yellow-700 text-xs font-bold mb-2"
+          class="block tracking-wide text-green-700 font-bold mb-2"
         >
           name <sup>{{ " " }}*</sup>
         </label>
@@ -27,7 +27,7 @@
       </div>
       <div class="w-full md:w-1/2 px-3">
         <label
-          class="block uppercase tracking-wide text-yellow-700 text-xs font-bold mb-2"
+          class="block tracking-wide text-green-700 font-bold mb-2"
         >
           mobile
         </label>
@@ -48,7 +48,7 @@
     <div class="flex flex-wrap -mx-3 mb-6">
       <div class="w-full px-3">
         <label
-          class="block uppercase tracking-wide text-yellow-700 text-xs font-bold mb-2"
+          class="block tracking-wide text-green-700 font-bold mb-2"
         >
           e-mail<sup>{{ " " }}*</sup>
         </label>
@@ -69,7 +69,7 @@
     <div class="flex flex-wrap -mx-3 mb-6">
       <div class="w-full px-3">
         <label
-          class="block uppercase tracking-wide text-yellow-700 text-xs font-bold mb-2"
+          class="block tracking-wide text-green-700 font-bold mb-2"
         >
           subject<sup>{{ " " }}*</sup>
         </label>
@@ -88,7 +88,7 @@
     <div class="flex flex-wrap -mx-3 mb-6">
       <div class="w-full px-3">
         <label
-          class="block uppercase tracking-wide text-yellow-700 text-xs font-bold mb-2"
+          class="block tracking-wide text-green-700 font-bold mb-2"
         >
           description
         </label>
@@ -194,16 +194,6 @@ export default {
       } else {
         this.changeHandler()
       }
-      localStorage.setItem(
-        "userdata",
-        JSON.stringify({
-          username: this.username,
-          email: this.email,
-          mobile: this.mobile
-        })
-      )
-      this.subject = ""
-      this.description = ""
     },
     handleResponse(status) {
       status ? this.snackBarVisibility('thanks for contacting us. our team will reach out shortly', true, 'green') : this.snackBarVisibility('sorry! an error occured while submitting. try after some time', true)
@@ -225,11 +215,11 @@ export default {
         else
           this.descriptionErr = !InputValidations.validateDescription(this.description)
       } else {
-        this.usernameErr = true
-        this.emailErr = true
-        this.mobileErr = true
-        this.subjectErr = true
-        this.descriptionErr = true
+        this.usernameErr = !InputValidations.validateName(this.username)
+        this.emailErr = !InputValidations.validateEmail(this.email)
+        this.mobileErr = !InputValidations.validateMobile(this.mobile)
+        this.subjectErr = !InputValidations.validateSubject(this.subject)
+        this.descriptionErr = !InputValidations.validateDescription(this.description)
       }
     }
   }

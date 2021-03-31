@@ -248,40 +248,14 @@
             </div>
           </div>
         </section>
-        <section class="pb-20 pt-48 relative block bg-gray-900 mt-24">
-          <div class="container mx-auto px-4 lg:pt-24 lg:pb-64">
-            <div class="flex flex-wrap text-center justify-center">
-              <div class="w-full lg:w-6/12 px-4">
-                <h2 class="text-4xl font-semibold text-white">
-                  build something
-                </h2>
-                <p class="text-lg leading-relaxed mt-4 mb-4 text-gray-500">
-                  connect with us at:
-                </p>
-                <a
-                  href="mailto:open.devs.github@gmail.com"
-                  target="_blank"
-                  class="brand-icon text-green-400"
-                  ><font-awesome :icon="['fas', 'envelope']"
-                /></a>
-                <a
-                  href="https://github.com/open-devs"
-                  target="_blank"
-                  class="brand-icon text-green-400"
-                  ><font-awesome :icon="['fab', 'github']"
-                /></a>
-                <a
-                  href="https://dev.to/opendevs_2020"
-                  target="_blank"
-                  class="brand-icon text-green-400"
-                  ><font-awesome :icon="['fab', 'dev']"
-                /></a>
-                <a
-                  href="https://opendevs-2020.medium.com/"
-                  target="_blank"
-                  class="brand-icon text-green-400"
-                  ><font-awesome :icon="['fab', 'medium']"
-                /></a>
+        <section class="pb-20 pt-20 relative block bg-gray-900">
+          <div class="container mx-auto">
+            <div class="flex flex-wrap items-center justify-center lg:divide-x">
+              <div class="w-full lg:w-4/12 ml-auto mr-auto px-12">
+                <FollowUs />
+              </div>
+              <div class="w-full lg:w-8/12 ml-auto mr-auto px-12">
+                <ContactUs />
               </div>
             </div>
           </div>
@@ -292,10 +266,13 @@
 </template>
 
 <script>
+import ContactUs from "../components/ContactUs.vue"
+import FollowUs from "../components/FollowUs.vue"
 export default {
+  components: { ContactUs, FollowUs },
   metaInfo: {
-    title: "Home",
-  },
+    title: "Home"
+  }
 }
 </script>
 

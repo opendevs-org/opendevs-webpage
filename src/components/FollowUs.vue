@@ -1,10 +1,9 @@
 <template>
-  <div class="flex  text-center justify-center">
+  <div class="flex text-center justify-center">
     <div>
       <p class="text-lg leading-relaxed mt-4 mb-4 text-gray-500">
         connect with us at:
       </p>
-
       <a
         href="mailto:open.devs.github@gmail.com"
         target="_blank"
@@ -33,13 +32,3 @@
 
   </div>
 </template>
-
-<script>
-
-export default {
-
-  name: "FollowUs"
-};
-</script>
-
-<style scoped></style>

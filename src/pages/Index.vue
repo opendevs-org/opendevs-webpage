@@ -248,16 +248,15 @@
             </div>
           </div>
         </section>
-        <section class="pb-20 pt-48 relative block bg-gray-900 mt-24 my-style">
-          <div class="box">
-            <div class="one">
-              <FollowUs />
-            </div>
-            <div class="two">
-              <Bar />
-            </div>
-            <div class="three">
-              <ContactUs />
+        <section class="pb-20 pt-20 relative block bg-gray-900">
+          <div class="container mx-auto">
+            <div class="flex flex-wrap items-center justify-center lg:divide-x">
+              <div class="w-full lg:w-4/12 ml-auto mr-auto px-12">
+                <FollowUs />
+              </div>
+              <div class="w-full lg:w-8/12 ml-auto mr-auto px-12">
+                <ContactUs />
+              </div>
             </div>
           </div>
         </section>
@@ -267,70 +266,16 @@
 </template>
 
 <script>
-import ContactUs from "../components/ContactUs.vue";
-import FollowUs from "../components/FollowUs.vue";
-import Bar from "../components/Bar.vue";
-import SnackBar from "../components/SnackBar.vue";
+import ContactUs from "../components/ContactUs.vue"
+import FollowUs from "../components/FollowUs.vue"
 export default {
-  components: { ContactUs, FollowUs, Bar, SnackBar },
+  components: { ContactUs, FollowUs },
   metaInfo: {
     title: "Home"
-  },
-  data:function(){
-    return {
-      showSnackBar:false,
-    }
   }
-};
+}
 </script>
 
-<style scoped>
-@media only screen and (min-width: 1200px) {
-  .box {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .one {
-    flex: 3 1 auto;
-  }
-
-  .two {
-    flex: 1 1 auto;
-  }
-
-  .three {
-    flex: 1 1 auto;
-  }
-}
-@media only screen and (max-width: 1200px) {
-  .box {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-
-  .one {
-    flex: 2 1 auto;
-    margin-bottom: 5%;
-  }
-
-  .two {
-    flex: 1 1 auto;
-    margin-bottom: 5%;
-    padding: 0 20%;
-  }
-
-  .three {
-    flex: 1 1 auto;
-    padding: 0 10%;
-  }
-}
-</style>
 <page-query>
   query getConfigData {
     metadata {

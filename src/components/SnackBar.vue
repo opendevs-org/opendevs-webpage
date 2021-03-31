@@ -1,15 +1,10 @@
 <template>
   <div v-if="display">
-    <div v-if="success" class="success-snackbar">
-      thanks for contacting us. our team will reach out shortly
-      <span class="close" v-on:click="clicked">{{ " " }}&#10006;</span>
-    </div>
-    <div v-else class="error-snackbar">
-      sorry! an error occured while submitting. try after some time<span
-        class="close"
-        v-on:click="clicked"
-        >{{ " " }}&#10006;</span
-      >
+    <div :class="['relative', 'py-3', 'pl-4', 'pr-10', 'leading-normal', `text-${statusColor}-700`, `bg-${statusColor}-100`, 'rounded-lg']" role="alert">
+      <p>{{ message }}</p>
+      <span class="absolute inset-y-0 right-0 flex items-center mr-4" v-on:click="clicked">
+        <svg class="w-4 h-4 fill-current" role="button" viewBox="0 0 20 20"><path d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" fill-rule="evenodd"></path></svg>
+      </span>
     </div>
   </div>
 </template>
@@ -22,65 +17,20 @@ export default {
       type: Boolean,
       default: false
     },
-    success: {
+    statusColor: {
       type: Boolean,
       default: false
     },
-    close: {
-      type: Function
+    message: {
+      type: String,
+      required: true
     }
   },
 
   methods: {
     clicked() {
-      this.close();
+      this.$emit('close')
     }
   }
-};
+}
 </script>
-
-<style scoped>
-.success-snackbar {
-  transition-property: opacity, bottom, left, right, width, margin,
-    border-radius;
-  transition-duration: 0.5s;
-  transition-timing-function: ease;
-  font-family: RobotoDraft;
-  font-size: 14px;
-  min-height: 14px;
-  background-color: #1a7c1f;
-  position: fixed;
-  font-size: 1rem;
-  color: rgb(255, 255, 255);
-  border-radius: 5px;
-  line-height: 22px;
-  padding: 15px 26px;
-  opacity: 1;
-  bottom: 2%;
-  right: 2%;
-}
-.error-snackbar {
-  transition-property: opacity, bottom, left, right, width, margin,
-    border-radius;
-  transition-duration: 0.5s;
-  transition-timing-function: ease;
-  font-family: RobotoDraft;
-  font-size: 14px;
-  min-height: 14px;
-  background-color: #ff1f01;
-  position: fixed;
-  font-size: 1rem;
-  color: rgb(255, 255, 255);
-  border-radius: 5px;
-  line-height: 22px;
-  padding: 15px 26px;
-  opacity: 1;
-  bottom: 2%;
-  right: 2%;
-}
-
-.close {
-  color: yellow;
-  margin-left: 1vw;
-}
-</style>

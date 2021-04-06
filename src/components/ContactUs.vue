@@ -9,17 +9,19 @@
       <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
         <label
           class="block tracking-wide text-green-700 font-bold mb-2"
+          for="full-name"
         >
           name <sup>{{ " " }}*</sup>
         </label>
         <input
           class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-          id="grid-first-name"
+          id="full-name"
           type="text"
           placeholder="full name"
           v-model="username"
           @change="changeHandler"
           name="username"
+          autocomplete="name"
         />
         <p v-if="this.usernameErr" class="text-red-500 text-xs italic">
           entered name is not valid
@@ -28,17 +30,19 @@
       <div class="w-full md:w-1/2 px-3">
         <label
           class="block tracking-wide text-green-700 font-bold mb-2"
+          for="mobile"
         >
           mobile
         </label>
         <input
           class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-          id="grid-last-name"
-          type="text"
+          id="mobile"
+          type="tel"
           placeholder="10 digit mobile no"
           v-model="mobile"
           @change="changeHandler"
           name="mobile"
+          autocomplete="tel"
         />
         <p v-if="this.mobileErr" class="text-red-500 text-xs italic">
           invalid mobile number
@@ -49,6 +53,7 @@
       <div class="w-full px-3">
         <label
           class="block tracking-wide text-green-700 font-bold mb-2"
+          for="email"
         >
           e-mail<sup>{{ " " }}*</sup>
         </label>
@@ -60,6 +65,7 @@
           v-model="email"
           @change="changeHandler"
           name="email"
+          autocomplete="email"
         />
         <p v-if="this.emailErr" class="text-red-500 text-xs italic">
           invalid email format
@@ -70,12 +76,14 @@
       <div class="w-full px-3">
         <label
           class="block tracking-wide text-green-700 font-bold mb-2"
+          for="subject"
         >
           subject<sup>{{ " " }}*</sup>
         </label>
         <input
           class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
           placeholder="enter the subject"
+          id="subject"
           v-model="subject"
           @change="changeHandler"
           name="subject"
@@ -89,6 +97,7 @@
       <div class="w-full px-3">
         <label
           class="block tracking-wide text-green-700 font-bold mb-2"
+          for="message"
         >
           description
         </label>
@@ -119,11 +128,8 @@
 </template>
 
 <script>
-import * as InputValidations from "../utils/InputValidations"
-import { init, send } from "emailjs-com"
+import { validateEmail, validateMobile, validateName, validateDescription, validateSubject } from "../utils/InputValidations"
 import SnackBar from "./SnackBar.vue"
-
-init(process.env.GRIDSOME_EMAILJS_USER_ID)
 
 export default {
   name: "ContactUs",
@@ -148,13 +154,6 @@ export default {
   }),
   methods: {
     submit() {
-      const {
-        validateEmail,
-        validateMobile,
-        validateName,
-        validateDescription,
-        validateSubject
-      } = InputValidations
       if (
         validateEmail(this.email) &&
         validateMobile(this.mobile) &&
@@ -162,17 +161,6 @@ export default {
         validateDescription(this.description) &&
         validateSubject(this.subject)
       ) {
-        const emailData = {
-          username: this.username,
-          email: this.email,
-          mobile: this.mobile || "Not provided",
-          subject: this.subject,
-          description: this.description || "Not provided"
-        }
-        const TEMPLATE_ID = process.env.GRIDSOME_EMAILJS_TEMPLATE_ID
-        const SERVICE_ID = process.env.GRIDSOME_EMAILJS_SERVICE_ID
-        send(SERVICE_ID, TEMPLATE_ID, emailData)
-          .then(() => this.handleResponse(true), () => this.handleResponse(false))
 
         const sheetsData = {
           Name: this.username,
@@ -188,7 +176,7 @@ export default {
           headers: {
             "Content-Type": "application/json"
           },
-          body: JSON.stringify(sheetsData) /////Google Sheet Code
+          body: JSON.stringify(sheetsData)
         })
           .then(() => this.handleResponse(true), () => this.handleResponse(false))
       } else {

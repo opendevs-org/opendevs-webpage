@@ -1,6 +1,6 @@
 ---
 title: s3 bucket downloader, a easy way to download files from AWS s3
-author: mihir kumar
+author: mihir kumar (@mikr13)
 date: 2020-10-28T07:00:00Z
 hero_image: "https://cdn.mindmajix.com/blog/images/aws-s3-230819.png"
 
@@ -75,11 +75,14 @@ node download --all
 
 ![interactive mode options](../images/logs.png)
 
+### so let's download assets form s3 without hassle & give this project an ⭐ at [github](https://github.com/open-devs/S3-Bucket-Download) or [buy us a coffee](https://www.buymeacoffee.com/opendevs)?
+
 ## who are we?
 
 we are **open devs** an organization of two motivated developers ([@alok722](https://github.com/alok722), [@mikr13](https://github.com/mikr13)) building open source tools & software to contribute to the community. we are very welcoming towards collaboration & new people joining us in any capacity with a vision to profit community in terms of great tools and education.
 you can join us in various places:
-[npm](https://www.npmjs.com/package/s3-bucket-downloader)
+[npm](https://www.npmjs.com/package/fastify-typescript-generator)
 [github](https://github.com/open-devs)
 [twitter](https://twitter.com/opendevs_2020)
 [website](https://opendevs.in)
+

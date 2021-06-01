@@ -1,12 +1,12 @@
 ---
 title: relax a little, a extension that tells you to relax
-author: mihir kumar
+author: mihir kumar (@mikr13)
 date: 2021-02-20T07:00:00Z
 hero_image: "https://cdn-images-1.medium.com/max/2000/1*mdRirRdIsRC2-DRumw-sNQ.png"
 
 ---
-
-hello friends, you know what is the best thing about vs-code? you can configure it the way you want & develop something to expand upon it. well in that context, today we at [opendevs](https://opendevs.in) are introducing a new product: [relax a little](https://marketplace.visualstudio.com/items?itemName=open-devs.relax-a-little). as the name suggests, this free extension tells you to relax in a way that you want.
+hi everyone, 👋
+you know what is the best thing about vs-code? you can configure it the way you want & develop something to expand upon it. well in that context, today we at [opendevs](https://opendevs.in) are introducing a new product: [relax a little](https://marketplace.visualstudio.com/items?itemName=open-devs.relax-a-little). as the name suggests, this free extension tells you to relax in a way that you want.
 
 ![relax a little marketplace listing](https://cdn-images-1.medium.com/max/2000/1*mdRirRdIsRC2-DRumw-sNQ.png)*relax a little marketplace listing*
 
@@ -74,7 +74,7 @@ of course, you can we will love it for you to come up with ideas to improve fell
 
 we do want to have a theme changer feature in it in near future to change the theme based on the time of the day, we also want to include some random quotes in breaks to make it fun to look at, of course, all of these features should be individually turn off-able.
 
-### so save on all those medicine 💊 costs & give this project an ⭐ at [github](https://github.com/open-devs/relax-a-little) & [visual studio marketplace](https://marketplace.visualstudio.com/items?itemName=open-devs.relax-a-little) or buy us a coffee?
+### so save on all those medicine 💊 costs & give this project an ⭐ at [github](https://github.com/open-devs/relax-a-little) & [visual studio marketplace](https://marketplace.visualstudio.com/items?itemName=open-devs.relax-a-little) or  or [buy us a coffee](https://www.buymeacoffee.com/opendevs)?
 
 ## who are we?
 

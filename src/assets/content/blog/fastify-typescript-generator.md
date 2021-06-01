@@ -1,6 +1,6 @@
 ---
 title: fastify typeScript generator, a generator for creating fastify server with typescript
-author: mihir kumar
+author: mihir kumar (@mikr13)
 date: 2020-09-01T07:00:00Z
 hero_image: "https://miro.medium.com/max/2560/1*V8vAkYA9QOi-gLKh68mtOg.jpeg"
 
@@ -64,6 +64,8 @@ fastify-typescript-generator
 # or
 fastify-ts-gen
 ```
+
+### so let's build some fast servers & give this project an ⭐ at [github](https://github.com/open-devs/fastify-typescript-generator) or [buy us a coffee](https://www.buymeacoffee.com/opendevs)?
 
 ## who are we?
 

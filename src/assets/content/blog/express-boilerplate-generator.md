@@ -1,6 +1,6 @@
 ---
 title: express boilerplate generator, a generator for scaffolding express basic setup with ease
-author: mihir kumar
+author: mihir kumar (@mikr13)
 date: 2020-11-28T07:00:00Z
 hero_image: "https://miro.medium.com/max/2400/1*xK8B_iiUSK_eU3jyG79djA.jpeg"
 
@@ -72,3 +72,15 @@ in this application you have two options to setup a project either with or witho
 <br>
 
 happy app-deving 😊
+
+### so let's build some express apps & give this project an ⭐ at [github](https://github.com/open-devs/express-boilerplate-generator) or [buy us a coffee](https://www.buymeacoffee.com/opendevs)?
+
+## who are we?
+
+we are **open devs** an organization of two motivated developers ([@alok722](https://github.com/alok722), [@mikr13](https://github.com/mikr13)) building open source tools & software to contribute to the community. we are very welcoming towards collaboration & new people joining us in any capacity with a vision to profit community in terms of great tools and education.
+you can join us in various places:
+[npm](https://www.npmjs.com/package/express-boilerplate-generator)
+[github](https://github.com/open-devs)
+[twitter](https://twitter.com/opendevs_2020)
+[website](https://opendevs.in)
+

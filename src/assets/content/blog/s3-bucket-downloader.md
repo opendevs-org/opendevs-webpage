@@ -1,6 +1,6 @@
 ---
 title: s3 bucket downloader, a easy way to download files from AWS s3
-author: mihir kumar (@mikr13)
+author: mihir kumar
 date: 2020-10-28T07:00:00Z
 hero_image: "https://cdn.mindmajix.com/blog/images/aws-s3-230819.png"
 

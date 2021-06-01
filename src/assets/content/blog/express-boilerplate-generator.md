@@ -1,6 +1,6 @@
 ---
 title: express boilerplate generator, a generator for scaffolding express basic setup with ease
-author: mihir kumar (@mikr13)
+author: mihir kumar
 date: 2020-11-28T07:00:00Z
 hero_image: "https://miro.medium.com/max/2400/1*xK8B_iiUSK_eU3jyG79djA.jpeg"
 

@@ -1,6 +1,6 @@
 ---
 title: relax a little, a extension that tells you to relax
-author: mihir kumar (@mikr13)
+author: mihir kumar
 date: 2021-02-20T07:00:00Z
 hero_image: "https://cdn-images-1.medium.com/max/2000/1*mdRirRdIsRC2-DRumw-sNQ.png"
 

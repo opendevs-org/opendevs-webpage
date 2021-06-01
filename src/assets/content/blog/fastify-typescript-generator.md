@@ -1,6 +1,6 @@
 ---
 title: fastify typeScript generator, a generator for creating fastify server with typescript
-author: mihir kumar (@mikr13)
+author: mihir kumar
 date: 2020-09-01T07:00:00Z
 hero_image: "https://miro.medium.com/max/2560/1*V8vAkYA9QOi-gLKh68mtOg.jpeg"
 

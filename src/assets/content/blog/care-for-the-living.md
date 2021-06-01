@@ -1,14 +1,16 @@
 ---
 title: care for the living, a webapp where we are trying to connect requestor to donor.
-author: mihir kumar (@mikr13)
+author: mihir kumar
 date: 2021-04-01T07:00:00Z
 hero_image: "https://cdn.pixabay.com/photo/2017/02/10/12/03/volunteer-2055010_960_720.png"
 
 ---
 hi everyone, 👋
-at [opendevs](https://opendevs.in) our goal is to help fellow people. india recently went through a pretty rough period with it's medical infrastructure being overburdened & people not getting the care that they should get. but we saw people definitely wanted to help others & there were communications but they were all scattered. to make a single place where people in need & people who can help can come together we created a platform where people can request for any sort of donations whether it be plasma, oxygen, medicine, blood, monetary or any other & if anyone has something the other needs, they can help them out. this portal has already been helped with many requests & it's continuing to do so.
+at [opendevs](https://opendevs.in) our goal is to help fellow people. india recently went through a pretty rough period with it's medical infrastructure being overburdened & people not getting the care that they should get. but we saw people definitely wanted to help others & there were communications but they were all scattered. to make a single place where people in need & people who can help can come together we created [care-for-the-living](https://carefortheliving.org/) where people can request for any sort of donations whether it be plasma, oxygen, medicine, blood, monetary or any other & if anyone has something the other needs, they can help them out. this portal has already been helped with many requests & it's continuing to do so.
 
-[care-for-the-living](https://carefortheliving.org/)
+## How can I access it 💻?
+
+you can access the platform here: [care-for-the-living](https://carefortheliving.org/)
 
 ## How can I use it 📜?
 

@@ -20,13 +20,10 @@
     "@gridsome/source-filesystem": "^0.6.2",
     "@gridsome/transformer-remark": "^0.6.4",
     "@tailwindcss/postcss7-compat": "npm:@tailwindcss/postcss7-compat",
-    "autoprefixer": "^9",
     "bowser": "^2.11.0",
     "emailjs-com": "^2.6.4",
     "googleapis": "^74.2.0",
-    "gridsome": "^0.7.23",
-    "postcss": "^8",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat"
+    "gridsome": "^0.7.23"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
@@ -37,6 +34,7 @@
     "@gridsome/plugin-sitemap": "^0.4.0",
     "@vue/cli-plugin-eslint": "^4.5.13",
     "@vue/cli-service": "^4.5.13",
+    "autoprefixer": "^9.8.6",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.27.0",
     "eslint-config-prettier": "^8.3.0",
@@ -47,10 +45,12 @@
     "gridsome-plugin-tailwindcss": "^4.1.1",
     "hex-to-rgb": "1.0.1",
     "node-sass": "^5.0.0",
+    "postcss": "^7.0.36",
     "postcss-import": "10.0.0",
     "postcss-preset-env": "6.7.0",
     "rimraf": "3.0.2",
-    "sass-loader": "^10.1.0"
+    "sass-loader": "^10.1.0",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.2"
   },
   "keywords": [
     "gridsome",

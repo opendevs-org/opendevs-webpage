@@ -1,24 +1,22 @@
 <template>
   <Layout page="me">
-    <div class="container relative mx-auto">
-      <div class="items-center flex flex-wrap">
-        <div class="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
-          <div class="py-4">
-            <h1 class="font-semibold text-5xl underline">the resum∈</h1>
-          </div>
-        </div>
-      </div>
-    </div>
+    <PageHeader title="the résumé" />
+    <LoadingSpinner v-if="show" />
     <iframe
       :src="data"
       width="100%"
       height="800px"
+      @load="load"
     >Loading...</iframe>
   </Layout>
 </template>
 
 <script>
+import PageHeader from '../../components/PageHeader.vue'
+import LoadingSpinner from '../../components/LoadingSpinner.vue'
+
 export default {
+  components: { PageHeader, LoadingSpinner },
   metaInfo: {
     title: "Resume",
     bodyAttrs: {
@@ -28,6 +26,7 @@ export default {
   data() {
     return {
       username: null,
+      show: true,
     }
   },
   computed: {
@@ -46,6 +45,11 @@ export default {
       }
     },
   },
+  methods: {
+    load() {
+      this.show = false
+    }
+  }
 }
 </script>
 

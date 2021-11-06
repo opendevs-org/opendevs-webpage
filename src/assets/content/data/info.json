@@ -11,11 +11,13 @@
     "achievements": [],
     "talks": [],
     "projects": [],
-    "programs": []
+    "programs": [],
+    "designation": "founder",
+    "resumeURL":"https://docs.google.com/document/d/1s-fREyWoZ8Fn_KahIjmFoaSJ-XoBQ9-u/preview"
   },
   {
     "name": "alok raj",
-    "username": "alok417",
+    "username": "alok722",
     "email": "mailto:alokr417@gmail.com",
     "avatar": "/alok.png",
     "quote": "It always seems impossible until it is done.",
@@ -26,11 +28,13 @@
     "achievements": [],
     "talks": [],
     "projects": [],
-    "programs": []
+    "programs": [],
+    "designation": "founder",
+    "resumeURL":"https://docs.google.com/document/d/13_WUbHy-nGeXbntjRNKW6IQdOvJIiP8zkH6atdGzTU8/preview"
   },
   {
     "name": "venkata sravan kumar",
-    "username": "sravan23",
+    "username": "sravan",
     "email": "mailto:gollapudivenkatasravankumar@gmail.com",
     "avatar": "/sravan.jpg",
     "quote": "when you want something, all the universe conspires in helping you to achieve it",
@@ -41,21 +45,8 @@
     "achievements": [],
     "talks": [],
     "projects": [],
-    "programs": []
-  },
-  {
-    "name": "you ?",
-    "username": "bright_star",
-    "email": "",
-    "avatar": "you.png",
-    "quote": "quote that defines you?",
-    "github_handle": "",
-    "linkedin_handle": "",
-    "twitter_handle": "",
-    "intro": "",
-    "achievements": [],
-    "talks": [],
-    "projects": [],
-    "programs": []
+    "programs": [],
+    "designation": "member",
+    "resumeURL":"https://docs.google.com/document/d/1zLTq4IZDP8q2yh4tMTyFczNoLK0yQMWEBisljJd6QLU/preview"
   }
 ]

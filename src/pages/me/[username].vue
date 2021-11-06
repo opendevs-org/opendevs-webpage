@@ -1,10 +1,26 @@
 <template>
-  <Layout page="me"> </Layout>
+  <Layout page="me">
+    <div class="container relative mx-auto">
+      <div class="items-center flex flex-wrap">
+        <div class="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
+          <div class="py-4">
+            <h1 class="font-semibold text-5xl underline">the resum∈</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <iframe
+      :src="data"
+      width="100%"
+      height="800px"
+    >Loading...</iframe>
+  </Layout>
 </template>
 
 <script>
 export default {
   metaInfo: {
+    title: "Resume",
     bodyAttrs: {
       class: "bg-night overflow-x-hidden",
     },
@@ -17,7 +33,7 @@ export default {
   computed: {
     data() {
       if (this.$page.person.edges) {
-        return this.$page.person.edges[0].node
+        return this.$page.person.edges[0].node.resumeURL
       } else {
         return {}
       }
@@ -35,48 +51,11 @@ export default {
 
 <page-query>
 query ($username: String) {
-	person: allPeople(filter: { username: { eq: $username } }) {
+	person: allTeam(filter: { username: { eq: $username } }) {
     edges {
       node {
-        name
+        resumeURL
         username
-        intro
-        email
-        avatar
-        quote
-        github_handle
-        linkedin_handle
-        twitter_handle
-        # talks {
-        #  title
-        #  event
-        #  isOnline
-        #  date
-        #  links {
-        #    label
-        #    link
-        #  }
-        #}
-        #projects {
-        #  name
-        #  featured
-        #  links {
-        #    label
-        #    link
-        #  }
-        #}
-        #achievements {
-        #  title
-        #  description
-        #}
-        #programs {
-        #  title
-        #  description
-        #  links {
-        #    label
-        #    link
-        #  }
-        #}
       }
     }
   }

@@ -1,10 +1,24 @@
 <template>
-  <Layout page="me"> </Layout>
+  <Layout page="me">
+    <PageHeader title="the résumé" />
+    <LoadingSpinner v-if="show" />
+    <iframe
+      :src="data"
+      width="100%"
+      height="800px"
+      @load="load"
+    >Loading...</iframe>
+  </Layout>
 </template>
 
 <script>
+import PageHeader from '../../components/PageHeader.vue'
+import LoadingSpinner from '../../components/LoadingSpinner.vue'
+
 export default {
+  components: { PageHeader, LoadingSpinner },
   metaInfo: {
+    title: "Resume",
     bodyAttrs: {
       class: "bg-night overflow-x-hidden",
     },
@@ -12,12 +26,13 @@ export default {
   data() {
     return {
       username: null,
+      show: true,
     }
   },
   computed: {
     data() {
       if (this.$page.person.edges) {
-        return this.$page.person.edges[0].node
+        return this.$page.person.edges[0].node.resumeURL
       } else {
         return {}
       }
@@ -30,53 +45,21 @@ export default {
       }
     },
   },
+  methods: {
+    load() {
+      this.show = false
+    }
+  }
 }
 </script>
 
 <page-query>
 query ($username: String) {
-	person: allPeople(filter: { username: { eq: $username } }) {
+	person: allTeam(filter: { username: { eq: $username } }) {
     edges {
       node {
-        name
+        resumeURL
         username
-        intro
-        email
-        avatar
-        quote
-        github_handle
-        linkedin_handle
-        twitter_handle
-        # talks {
-        #  title
-        #  event
-        #  isOnline
-        #  date
-        #  links {
-        #    label
-        #    link
-        #  }
-        #}
-        #projects {
-        #  name
-        #  featured
-        #  links {
-        #    label
-        #    link
-        #  }
-        #}
-        #achievements {
-        #  title
-        #  description
-        #}
-        #programs {
-        #  title
-        #  description
-        #  links {
-        #    label
-        #    link
-        #  }
-        #}
       }
     }
   }

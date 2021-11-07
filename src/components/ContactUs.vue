@@ -122,7 +122,7 @@
       >
         send
       </button>
-      <SnackBar :display="display" :statusColor="statusColor" :message="message" :close="closeSnackBar" />
+      <SnackBar :display="display" :statusColor="statusColor" :message="message" :close="display = false" />
     </div>
   </form>
 </template>
@@ -184,11 +184,15 @@ export default {
       }
     },
     handleResponse(status) {
-      status ? this.snackBarVisibility('thanks for contacting us. our team will reach out shortly', true, 'green') : this.snackBarVisibility('sorry! an error occured while submitting. try after some time', true)
+      status ? this.snackBarVisibility('thanks for contacting us. our team will reach out shortly', 'green') : this.snackBarVisibility('sorry! an error occured while submitting. try after some time', 'red')
+      setTimeout(() => {
+        this.display = false
+      }, 10000)
     },
     snackBarVisibility(message, statusColor) {
       this.message = message
       this.statusColor = statusColor
+      this.display = true
     },
     changeHandler(event) {
       if (event) {

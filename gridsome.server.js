@@ -1,13 +1,13 @@
 
 const { resolve } = require('path')
 
-const peopleData = require('./src/assets/content/data/info.json')
+const teamData = require('./src/assets/content/data/info.json')
 
 module.exports = (api) => {
   api.loadSource(actions => {
-    const collection = actions.addCollection('people')
+    const collection = actions.addCollection('team')
 
-    for (const item of peopleData) {
+    for (const item of teamData) {
       collection.addNode({ ...item })
       api.createPages(({ createPage }) => {
         createPage({

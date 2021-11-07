@@ -18,8 +18,8 @@ export default {
       default: false
     },
     statusColor: {
-      type: Boolean,
-      default: false
+      type: String,
+      default: 'white'
     },
     message: {
       type: String,

@@ -46,7 +46,7 @@
                     </button>
                   </g-link>
                   <br />
-                  <g-link to="/people/" class="py-12">
+                  <g-link to="/team/" class="py-12">
                     <button
                       type="button"
                       class="bg-black my-4 rounded-lg p-2 py-2 inline-flex items-center justify-center text-white hover:text-gray-800 hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"

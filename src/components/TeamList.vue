@@ -13,6 +13,7 @@
       <div
         class="shadow-xl transform transition duration-500 hover:scale-105"
         v-if="category === 'member'"
+        @click="genericCardMethod()"
       >
         <div
           class="
@@ -141,6 +142,10 @@ export default {
       type: String,
       required: true,
     },
+    genericCardMethod: {
+      type: Function,
+      required: false,
+    }
   },
 }
 </script>

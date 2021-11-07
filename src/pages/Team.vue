@@ -1,7 +1,7 @@
 <template>
   <Layout page="team">
     <PageHeader title="the craftsmen" />
-    <TeamList category="member" :data="data.member" />
+    <TeamList category="member" :data="data.member" :genericCardMethod="scrollMeTo('joinus')" />
     <PageHeader title="the founders" />
     <TeamList category="founder" :data="data.founder" />
     <div ref="joinus" />
@@ -56,17 +56,15 @@ export default {
         }
     },
   },
-  watch: {
-    "data.founder"(val) {
-      if (!val) {
-        this.$router.push("/")
-      }
-    },
-  },
   methods: {
     load() {
       this.show = false
     },
+    scrollMeTo(refName) {
+      let element = this.$refs[refName]
+      let top = element.offsetTop
+      window.scrollTo(0, top)
+    }
   },
 }
 </script>

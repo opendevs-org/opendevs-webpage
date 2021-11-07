@@ -13,7 +13,7 @@
       <div
         class="shadow-xl transform transition duration-500 hover:scale-105"
         v-if="category === 'member'"
-        @click="genericCardMethod()"
+        @click="genericCardMethod"
       >
         <div
           class="

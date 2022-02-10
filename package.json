@@ -44,7 +44,7 @@
     "git-cz": "^4.7.6",
     "gridsome-plugin-tailwindcss": "^4.1.1",
     "hex-to-rgb": "1.0.1",
-    "node-sass": "^5.0.0",
+    "node-sass": "^7.0.0",
     "postcss": "^7.0.36",
     "postcss-import": "10.0.0",
     "postcss-preset-env": "6.7.0",

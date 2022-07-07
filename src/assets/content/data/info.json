@@ -1,4 +1,5 @@
-[{
+[
+  {
     "name": "mihir kumar",
     "username": "mikr13",
     "email": "mailto:mihirpandey.13@gmail.com",
@@ -13,14 +14,14 @@
     "projects": [],
     "programs": [],
     "designation": "founder",
-    "resumeURL":"https://docs.google.com/document/d/1s-fREyWoZ8Fn_KahIjmFoaSJ-XoBQ9-u/preview"
+    "resumeURL": "https://docs.google.com/document/d/1s-fREyWoZ8Fn_KahIjmFoaSJ-XoBQ9-u/preview"
   },
   {
     "name": "alok raj",
     "username": "alok722",
     "email": "mailto:alokr417@gmail.com",
     "avatar": "/alok.png",
-    "quote": "It always seems impossible until it is done.",
+    "quote": "it always seems impossible until it is done.",
     "github_handle": "https://github.com/alok722",
     "linkedin_handle": "https://www.linkedin.com/in/alok722",
     "twitter_handle": "https://twitter.com/alok722",
@@ -30,7 +31,24 @@
     "projects": [],
     "programs": [],
     "designation": "founder",
-    "resumeURL":"https://docs.google.com/document/d/13_WUbHy-nGeXbntjRNKW6IQdOvJIiP8zkH6atdGzTU8/preview"
+    "resumeURL": "https://docs.google.com/document/d/13_WUbHy-nGeXbntjRNKW6IQdOvJIiP8zkH6atdGzTU8/preview"
+  },
+  {
+    "name": "ajay dabas",
+    "username": "dabasajay",
+    "email": "mailto:se.dabasajay@gmail.com",
+    "avatar": "/dabasajay.jpg",
+    "quote": "yo Mama jokes are the best.",
+    "github_handle": "https://github.com/dabasajay",
+    "linkedin_handle": "https://www.linkedin.com/in/dabasajay",
+    "twitter_handle": "",
+    "intro": "",
+    "achievements": [],
+    "talks": [],
+    "projects": [],
+    "programs": [],
+    "designation": "founder",
+    "resumeURL": "https://docs.google.com/document/d/1zLTq4IZDP8q2yh4tMTyFczNoLK0yQMWEBisljJd6QLU/preview"
   },
   {
     "name": "venkata sravan kumar",
@@ -40,13 +58,13 @@
     "quote": "when you want something, all the universe conspires in helping you to achieve it",
     "github_handle": "https://github.com/Sravan2305",
     "linkedin_handle": "https://www.linkedin.com/in/sravankumar23/",
-    "twitter_handle": "https://twitter.com/",
+    "twitter_handle": "",
     "intro": "",
     "achievements": [],
     "talks": [],
     "projects": [],
     "programs": [],
     "designation": "member",
-    "resumeURL":"https://docs.google.com/document/d/1zLTq4IZDP8q2yh4tMTyFczNoLK0yQMWEBisljJd6QLU/preview"
+    "resumeURL": "https://docs.google.com/document/d/1zLTq4IZDP8q2yh4tMTyFczNoLK0yQMWEBisljJd6QLU/preview"
   }
 ]

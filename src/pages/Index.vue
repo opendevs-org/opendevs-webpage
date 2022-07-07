@@ -2,15 +2,9 @@
   <Layout page="home">
     <div>
       <main>
-        <div
-          class="relative pt-16 pb-32 flex content-center items-center justify-center"
-          style="min-height: 75vh"
-        >
+        <div class="relative pt-16 pb-32 flex content-center items-center justify-center" style="min-height: 75vh">
           <div class="absolute top-0 w-full h-full bg-center bg-cover">
-            <span
-              id="blackOverlay"
-              class="w-full h-full absolute opacity-75 bg-blue-100"
-            ></span>
+            <span id="blackOverlay" class="w-full h-full absolute opacity-75 bg-blue-100"></span>
           </div>
           <div class="container relative mx-auto">
             <div class="items-center flex flex-wrap">
@@ -21,62 +15,40 @@
                   </h1>
                   <p class="mt-4 text-lg text-gray-600">
                     {{ $page.metadata.siteName }} is an organization created by
-                    two motivated developers (<a
-                      class="contributor"
-                      :href="`https://linkedin.com/in/mikr13`"
-                      >@mikr13</a
-                    >,
-                    <a
-                      class="contributor"
-                      :href="`https://linkedin.com/in/alok722`"
-                      >@alok722</a
-                    >) building open source software to contribute to the
+                    three motivated developers (
+                    <a class="contributor" href="https://linkedin.com/in/dabasajay">@dabasajay</a>
+                    ,
+                    <a class="contributor" href="https://linkedin.com/in/alok722">@alok722</a> & <a class="contributor"
+                      href="https://linkedin.com/in/mikr13">@mikr13</a>) building open source
+                    software to contribute to the
                     community. we are looking forward to meet other
                     <strong>awesome</strong> poeple and build stuff together.<br />so
                     come, join us ✌
                   </p>
                   <g-link to="/blogs/" class="py-12">
-                    <button
-                      type="button"
-                      class="bg-black my-4 rounded-lg p-2 py-2 inline-flex items-center justify-center text-white hover:text-gray-800 hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
-                    >
-                      all product blogs &nbsp;<font-awesome
-                        :icon="['fas', 'arrow-right']"
-                      />
+                    <button type="button"
+                      class="bg-black my-4 rounded-lg p-2 py-2 inline-flex items-center justify-center text-white hover:text-gray-800 hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                      all product blogs &nbsp;
+                      <font-awesome :icon="['fas', 'arrow-right']" />
                     </button>
                   </g-link>
                   <br />
                   <g-link to="/team/" class="py-12">
-                    <button
-                      type="button"
-                      class="bg-black my-4 rounded-lg p-2 py-2 inline-flex items-center justify-center text-white hover:text-gray-800 hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
-                    >
-                      awesome team &nbsp;<font-awesome
-                        :icon="['fas', 'arrow-right']"
-                      />
+                    <button type="button"
+                      class="bg-black my-4 rounded-lg p-2 py-2 inline-flex items-center justify-center text-white hover:text-gray-800 hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                      awesome team &nbsp;
+                      <font-awesome :icon="['fas', 'arrow-right']" />
                     </button>
                   </g-link>
                 </div>
               </div>
             </div>
           </div>
-          <div
-            class="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden"
-            style="height: 70px; transform: translateZ(0px)"
-          >
-            <svg
-              class="absolute bottom-0 overflow-hidden"
-              xmlns="http://www.w3.org/2000/svg"
-              preserveAspectRatio="none"
-              version="1.1"
-              viewBox="0 0 2560 100"
-              x="0"
-              y="0"
-            >
-              <polygon
-                class="text-gray-300 fill-current"
-                points="2560 0 2560 100 0 100"
-              ></polygon>
+          <div class="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden"
+            style="height: 70px; transform: translateZ(0px)">
+            <svg class="absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+              version="1.1" viewBox="0 0 2560 100" x="0" y="0">
+              <polygon class="text-gray-300 fill-current" points="2560 0 2560 100 0 100"></polygon>
             </svg>
           </div>
         </div>
@@ -84,15 +56,8 @@
           <div class="container mx-auto px-4">
             <div class="flex flex-wrap">
               <div class="pt-6 w-full md:w-4/12 px-4 text-center">
-                <div
-                  class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg"
-                >
+                <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
                   <div class="px-4 py-5 flex-auto">
-                    <div
-                      class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-green-400"
-                    >
-                      <i class="fas fa-fingerprint"></i>
-                    </div>
                     <h6 class="text-xl font-semibold">
                       open source development
                     </h6>
@@ -105,9 +70,7 @@
                 </div>
               </div>
               <div class="w-full md:w-4/12 px-4 text-center md:-mt-8">
-                <div
-                  class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg"
-                >
+                <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
                   <div class="px-4 py-5 flex-auto">
                     <h6 class="text-xl font-semibold">teaching</h6>
                     <p class="mt-2 mb-4 text-gray-600">
@@ -119,15 +82,8 @@
                 </div>
               </div>
               <div class="pt-6 w-full md:w-4/12 px-4 text-center">
-                <div
-                  class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg"
-                >
+                <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
                   <div class="px-4 py-5 flex-auto">
-                    <div
-                      class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-green-400"
-                    >
-                      <i class="fas fa-fingerprint"></i>
-                    </div>
                     <h6 class="text-xl font-semibold">profile building</h6>
                     <p class="mt-2 mb-4 text-gray-600">
                       we are also helping people with building profiles on
@@ -143,28 +99,21 @@
                 <h3 class="text-3xl mb-2 font-semibold leading-normal">
                   we want to collaborate with you
                 </h3>
-                <p
-                  class="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-700"
-                >
+                <p class="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-700">
                   you know something? a small project in mind? or want to teach
                   your skills?
                 </p>
-                <p
-                  class="text-lg font-light leading-relaxed mt-0 mb-4 text-gray-700"
-                >
+                <p class="text-lg font-light leading-relaxed mt-0 mb-4 text-gray-700">
                   we can do all this together as a group of people who are
                   passionate about helping fellow developers in community
                 </p>
               </div>
               <div class="w-full md:w-4/12 px-4 mr-auto ml-auto">
                 <div
-                  class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-green-400"
-                >
-                  <img
-                    alt="..."
+                  class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-green-400">
+                  <img alt="..."
                     src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1051&amp;q=80"
-                    class="w-full align-middle rounded-t-lg"
-                  />
+                    class="w-full align-middle rounded-t-lg" />
                   <blockquote class="relative p-8 mb-4">
                     <h4 class="text-xl font-bold text-white">under one hood</h4>
                     <p class="text-md font-light mt-2 text-white">
@@ -181,17 +130,13 @@
           <div class="container mx-auto px-4">
             <div class="items-center flex flex-wrap">
               <div class="w-full md:w-4/12 ml-auto mr-auto px-4">
-                <img
-                  alt="..."
-                  class="max-w-full rounded-lg shadow-lg"
-                  src="https://images.unsplash.com/photo-1555212697-194d092e3b8f?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=634&amp;q=80"
-                />
+                <img alt="..." class="max-w-full rounded-lg shadow-lg"
+                  src="https://images.unsplash.com/photo-1555212697-194d092e3b8f?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=634&amp;q=80" />
               </div>
               <div class="w-full md:w-5/12 ml-auto mr-auto px-4">
                 <div class="md:pr-12">
                   <div
-                    class="text-pink-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-pink-300"
-                  >
+                    class="text-pink-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-pink-300">
                     <i class="fas fa-rocket text-xl"></i>
                   </div>
                   <h3 class="text-3xl font-semibold">a growing team</h3>
@@ -205,9 +150,8 @@
                       <div class="flex items-center">
                         <div>
                           <span
-                            class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 bg-pink-200 mr-3"
-                            ><i class="fas fa-fingerprint"></i
-                          ></span>
+                            class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 bg-pink-200 mr-3"><i
+                              class="fas fa-fingerprint"></i></span>
                         </div>
                         <div>
                           <h4 class="text-gray-600">learn new technologies</h4>
@@ -218,9 +162,8 @@
                       <div class="flex items-center">
                         <div>
                           <span
-                            class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 bg-pink-200 mr-3"
-                            ><i class="fab fa-html5"></i
-                          ></span>
+                            class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 bg-pink-200 mr-3"><i
+                              class="fab fa-html5"></i></span>
                         </div>
                         <div>
                           <h4 class="text-gray-600">collaborate to teach</h4>
@@ -231,9 +174,8 @@
                       <div class="flex items-center">
                         <div>
                           <span
-                            class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 bg-pink-200 mr-3"
-                            ><i class="far fa-paper-plane"></i
-                          ></span>
+                            class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 bg-pink-200 mr-3"><i
+                              class="far fa-paper-plane"></i></span>
                         </div>
                         <div>
                           <h4 class="text-gray-600">

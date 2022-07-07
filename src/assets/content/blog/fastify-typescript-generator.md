@@ -15,6 +15,7 @@ today we’ll learn to use a great generator tool to create a fastify server in 
 if you are coming from Node.js background you must have heard of expressjs, it is a web application framework that provides you with a simple API to build websites, web apps and back ends. Now express can be considered as a bit slower. fastify is detailed as a “fast and low overhead web framework, for Node.js”. fastify is a web framework highly focused on speed and low overhead. it is inspired by express and hapi, it is one of the fastest web frameworks in town. using fastify can increase your throughput by up to 100%.
 
 **advantages of using fastify?**
+
 * 100% asynchronous: all the core is implemented with asynchronous code, in this way not even a millisecond is wasted.
 * highly performant: as far as we know, fastify is one of the fastest web frameworks in town, depending on the code complexity we can serve up to 20000 requests per second.
 * extendible: **fastify** is fully extensible via its hooks, plugins, and decorators.
@@ -69,7 +70,7 @@ fastify-ts-gen
 
 ## who are we?
 
-we are **open devs** an organization of two motivated developers ([@alok722](https://github.com/alok722), [@mikr13](https://github.com/mikr13)) building open source tools & software to contribute to the community. we are very welcoming towards collaboration & new people joining us in any capacity with a vision to profit community in terms of great tools and education.
+we are **open devs** an organization of three motivated developers ([@dabasajay](https://github.com/dabasajay), ([@alok722](https://github.com/alok722) & [@mikr13](https://github.com/mikr13)) building open source tools & software to contribute to the community. we are very welcoming towards collaboration & new people joining us in any capacity with a vision to profit community in terms of great tools and education.
 you can join us in various places:
 [github](https://github.com/open-devs)
 [twitter](https://twitter.com/opendevs_2020)

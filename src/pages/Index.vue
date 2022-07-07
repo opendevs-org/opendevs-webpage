@@ -22,7 +22,7 @@
                       href="https://linkedin.com/in/mikr13">@mikr13</a>) building open source
                     software to contribute to the
                     community. we are looking forward to meet other
-                    <strong>awesome</strong> poeple and build stuff together.<br />so
+                    <strong>awesome</strong> people and build stuff together.<br />so
                     come, join us ✌
                   </p>
                   <g-link to="/blogs/" class="py-12">
